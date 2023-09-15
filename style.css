@@ -19,7 +19,7 @@
       /* Sections
    ========================================================================== */
       /**
- * Remove the margin in all browsers.
+ * Remove the margin in all browser.
  */
       body {
         margin: 0;
@@ -350,22 +350,7 @@ show all available options outright, rather than hide them behind a <select>
         opacity: 1;
       }
 
-      [dir="rtl"] .segmented-group label::before {
-        right: 0.625rem;
-        left: auto;
-      }
-      [dir="rtl"] .segmented-group label::after {
-        right: 1rem;
-        left: auto;
-      }
-      [dir="rtl"] .segmented-group input {
-        left: 0;
-        right: auto;
-      }
-      [dir="rtl"] .segmented-group .segmented-label {
-        padding: 0.625rem;
-        padding-right: 2.75rem;
-      }
+      
 
       /**
 Progress bar
@@ -405,23 +390,7 @@ Progress bar
       .step-by-step li + li {
         margin-top: 1.25rem;
       }
-      @media screen and (min-width: 48em) {
-        .step-by-step li + li {
-          margin-top: 0;
-        }
-      }
-
-      [dir="rtl"] .step-by-step li::after {
-        left: auto;
-        right: 1.1875rem;
-      }
-      @media screen and (min-width: 48em) {
-        [dir="rtl"] .step-by-step li::after {
-          left: auto;
-          right: 50%;
-        }
-      }
-
+     
       .step-by-step li.complete::after {
         background-color: #237978;
       }
@@ -430,73 +399,7 @@ Progress bar
         display: none;
       }
 
-      .progress-step__inner {
-        align-items: center;
-        display: flex;
-      }
-      @media screen and (min-width: 48em) {
-        .progress-step__inner {
-          flex-direction: column;
-          padding-top: 0.625rem;
-          text-align: center;
-        }
-      }
-      .progress-step__inner > span {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        padding: 0.625rem;
-      }
-      @media screen and (min-width: 48em) {
-        .progress-step__inner > span {
-          width: 9.375rem;
-        }
-      }
-
-      .progress-step__marker {
-        align-items: center;
-        background-color: #fff;
-        border: solid 3px #545454;
-        border-radius: 50%;
-        display: flex;
-        height: 2.75rem;
-        justify-content: center;
-        width: 2.75rem;
-      }
-      @media screen and (min-width: 48em) {
-        .progress-step__marker {
-          box-shadow: 0 0 0 0.625rem #fff;
-        }
-      }
-
-      .progress-step__marker.complete {
-        background-color: #237978;
-        border-color: #237978;
-        color: #fff;
-        position: relative;
-      }
-      .progress-step__marker.complete::before,
-      .progress-step__marker.complete::after {
-        background-color: #237978;
-        content: "";
-        position: absolute;
-      }
-      .progress-step__marker.complete::before {
-        border-radius: 50%;
-        height: 2.375rem;
-        left: 0;
-        top: 0;
-        width: 2.375rem;
-      }
-      .progress-step__marker.complete::after {
-        border: solid;
-        border-top-color: transparent;
-        border-width: 0 0 3px 3px;
-        height: 0.5625rem;
-        left: 0.625rem;
-        top: 0.8125rem;
-        transform: rotate(-45deg);
-        width: 1.125rem;
-      }
+    
 
       .step-by-step a {
         color: #545454;
@@ -677,21 +580,7 @@ Pay attention to whether the icon is before the text or after.
         }
       }
 
-      [dir="rtl"] .with-icon--before .icon {
-        margin-left: 0.5rem;
-        margin-right: 0;
-      }
-      @supports ((-webkit-margin-start: 1em) or (margin-inline-start: 1em)) {
-        [dir="rtl"] .with-icon--before .icon {
-          margin-left: 0;
-          -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem; /* 2 */
-        }
-      }
-      [dir="rtl"] .with-icon--after .icon {
-        margin-left: 0;
-        margin-right: 0.5rem;
-      }
+      
       @supports ((-webkit-margin-start: 1em) or (margin-inline-start: 1em)) {
         .with-icon--after .icon {
           margin-right: 0;
@@ -852,11 +741,7 @@ Pay attention to whether the icon is before the text or after.
         box-shadow: 0 -1px 0 0 inset;
       }
 
-      .skip-link [dir="rtl"]:active,
-      .skip-link [dir="rtl"]:focus {
-        left: auto;
-        right: 0;
-      }
+      
 
       /*------------------------------------*\
     #Social links
@@ -1134,10 +1019,7 @@ a viewport media query.
         color: #000;
       }
 
-      [dir="rtl"] .banner__inner p {
-        margin-left: 0;
-        margin-right: 0.625rem;
-      }
+      
 
       #lang-nav {
         background-color: #f8f8fb;
@@ -1413,12 +1295,7 @@ a viewport media query.
         position: relative;
       }
 
-      [dir="rtl"] #breadcrumb .l-cluster.l-cluster > * > * {
-        margin: 0 0.6875rem 0 0;
-        padding-left: 1em;
-        padding-right: 0;
-      }
-
+     
       .breadcrumbs a {
         font-size: 0.9375rem;
         line-height: 1.5;
@@ -1447,8 +1324,8 @@ a viewport media query.
  
 
       /*------------------------------------*\
-    #Main
-\*------------------------------------*/
+    Main
+
       /**
 1. We use left and right padding to add some minimum space between the
 contents of <main> and the edges of the parent element or viewport.
@@ -1650,25 +1527,16 @@ to our global box-sizing rule.
         padding-left: 0.9375rem;
       }
 
-      [dir="rtl"] .toc ul {
-        border-left: 0;
-        border-right: solid 3px #f9c818;
-        padding-left: 0;
-        padding-right: 0.9375rem;
-      }
-
+      
       .toc ul a {
         display: inline-block;
         padding-bottom: 0.625rem;
         padding-top: 0.625rem;
       }
 
-    /*------------------------------------------------ --*\
-    #Texte composant
 
-    1. Le mixin `stack` applique flexbox dans le sens de la colonne,
-    nous devons donc empêcher les boutons de s'étirer horizontalement
-\*------------------------------------------------ ---*/
+    /*
+    Texte composant */
       .component--text > * + * {
         margin-top: 1em;
       }
@@ -1732,10 +1600,7 @@ to our global box-sizing rule.
         border-left: solid 0.375rem;
       }
 
-      [dir="rtl"] .card--event {
-        border-left: 0;
-        border-right: solid 0.375rem;
-      }
+      
 
       .card--event,
       .card--member,
@@ -1845,37 +1710,6 @@ to our global box-sizing rule.
         padding: 0.75rem 0;
       }
 
-      /*------------------------------------*\
-    #Tag list
-\*------------------------------------*/
-      .tag-list.tag-list {
-        margin: -0.625rem;
-      }
-      .tag-list.tag-list li {
-        margin: 0.625rem;
-      }
-
-      .tag {
-        font-size: 0.875rem;
-        line-height: 1.4285714286;
-        background-color: rgba(206, 205, 205, 0.5);
-        border-radius: 0.25rem;
-        display: inline-block;
-        padding: 0.15625rem 0.3125rem 0.15625rem 0.3125rem;
-      }
-
-      /*
-Makes the tag links selectable if card link is stretched
-across entire card using pseudo element
- */
-      a.tag {
-        position: relative;
-        text-decoration: underline;
-        z-index: 10;
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
 
       /*------------------------------------*\
     #50 50
@@ -1916,12 +1750,12 @@ across entire card using pseudo element
         }
       }
 
-      .component--fifty-fifty__text .l-box {
+      .composent50/50 .l-box {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
       }
-      .component--fifty-fifty__text .l-box > * + * {
+      .composent50/50 .l-box > * + * {
         margin-top: 1rem;
       }
       .component--fifty-fifty__text .l-box a {
@@ -1961,91 +1795,10 @@ across entire card using pseudo element
       /*------------------------------------*\
     #Evangelists
 \*------------------------------------*/
-      @media screen and (min-width: 64em) {
-        .component--evangelists {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        }
-      }
-      .component--evangelists > * + * {
-        margin-top: 1rem;
-      }
-      @media screen and (min-width: 64em) {
-        .component--evangelists > * + * {
-          margin-top: 0;
-        }
-      }
+      
 
-      .component--evangelists__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .component--evangelists__text > * + * {
-        margin-top: 1em;
-      }
-      @media screen and (min-width: 64em) {
-        .component--evangelists__text {
-          flex-basis: 45%;
-        }
-      }
-      .component--evangelists__text h2 ~ * {
-        max-width: 41.25rem;
-      }
-
-      .component--evangelists__list {
-        background-color: #005a9c;
-        border-radius: 0.375rem;
-        color: #fff;
-        overflow: hidden;
-        padding-top: 1.5rem;
-      }
-      @media screen and (min-width: 64em) {
-        .component--evangelists__list {
-          flex-basis: 45%;
-        }
-      }
-      .component--evangelists__list h3 {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-      .component--evangelists__list li + li {
-        border-top: solid 1px #649bc5;
-      }
-      .component--evangelists__list .sidebar {
-        flex-basis: auto;
-      }
-      .component--evangelists__list .not-sidebar {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        min-width: calc(65% - 1.5rem);
-      }
-      .component--evangelists__list .not-sidebar > * + * {
-        margin-top: 0.75em;
-      }
-      .component--evangelists__list a {
-        color: #fff;
-      }
-      .component--evangelists__list a:visited,
-      .component--evangelists__list a:hover,
-      .component--evangelists__list a:active {
-        color: #fff;
-      }
-      .component--evangelists__list a:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-        color: #000;
-      }
-
-   
-
+    
+     
       /*------------------------------------*\
     #Group list
 \*------------------------------------*/
@@ -2147,133 +1900,9 @@ across entire card using pseudo element
         }
       }
 
-     /*--------------------------------------------------*\
-    #Glisser
-\*---------------------------------------------------*/
-      @media screen and (min-width: 64em) {
-        .slide {
-          align-items: flex-start;
-          display: flex;
-          justify-content: space-between;
-        }
-      }
-      .slide > * + * {
-        margin-top: 1rem;
-      }
-      @media screen and (min-width: 64em) {
-        .slide > * + * {
-          margin-top: 0;
-        }
-      }
+    
 
-      @media screen and (min-width: 64em) {
-        .slide__quote,
-        .slide__cite {
-          flex-basis: 45%;
-        }
-      }
-
-      .slide__quote {
-        background: url("../images/quote-bg.png") no-repeat 0 0;
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.6;
-        -webkit-margin-start: 2.1875rem;
-        margin-inline-start: 2.1875rem;
-        padding-top: 0.9375rem;
-        position: relative;
-      }
-      @media screen and (min-width: 48em) {
-        .slide__quote {
-          font-size: 1.5rem;
-          line-height: 1.4;
-        }
-      }
-      .slide__quote::before {
-        background-color: #005a9c;
-        border-radius: 0.3125rem;
-        content: "";
-        height: 100%;
-        left: -2.0625rem;
-        position: absolute;
-        top: 0;
-        width: 0.25rem;
-      }
-      .slide__quote > * {
-        max-width: 41.25rem;
-      }
-
-      [dir="rtl"] .slide__quote {
-        background-position-x: 100%;
-      }
-      [dir="rtl"] .slide__quote::before {
-        left: auto;
-        right: -2.0625rem;
-      }
-
-      .slide__cite {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        -webkit-padding-start: 0.3125rem;
-        padding-inline-start: 0.3125rem;
-      }
-      .slide__cite.l-sidebar .sidebar {
-        flex-basis: auto;
-      }
-      .slide__cite.l-sidebar .not-sidebar {
-        align-items: flex-start;
-        min-width: calc(70% - 1.5rem);
-      }
-      .slide__cite.l-sidebar .not-sidebar p:first-child {
-        font-weight: bold;
-      }
-      .slide__cite.l-sidebar .not-sidebar p:first-child + p {
-        margin-top: 0;
-      }
-
-      .slide__logo {
-        background-color: #fff;
-        height: 7.5rem;
-        padding: 1.5rem;
-        position: relative;
-        width: 11.25rem;
-      }
-      .slide__logo > img {
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        max-width: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-      @supports ((-o-object-fit: contain) or (object-fit: contain)) {
-        .slide__logo > img {
-          height: 100%;
-          max-width: none;
-          -o-object-fit: contain;
-          object-fit: contain;
-          position: static;
-        }
-      }
-
-      /*------------------------------------*\
-    #Slider core
-\*------------------------------------*/
-      .component--slider {
-        background-color: #f8f8fb;
-        padding-bottom: 3.125rem;
-        padding-top: 3.125rem;
-      }
-      .component--slider h2 {
-        font-size: 1rem;
-        font-weight: normal;
-        margin-bottom: 1.5rem;
-      }
-      .component--slider ul > li + li {
-        margin-top: 2rem;
-      }
-
+     
      /*--------------------------------------------------*\
     #Crosslinks
 \*---------------------------------------------------*/
@@ -2357,11 +1986,7 @@ across entire card using pseudo element
       /*------------------------------------*\
     #Recherche
 \*------------------------------------*/
-      input[type="search"] {
-        max-width: none;
-        position: relative;
-        z-index: 1;
-      }
+     
 
       .l-sidebar.search {
         overflow: visible;
@@ -2387,21 +2012,9 @@ across entire card using pseudo element
         max-width: none;
       }
 
-      @supports ((-webkit-padding-start: 1em) or (padding-inline-start: 1em)) {
-        input[type="search"] {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs/%3E%3Cpath d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z'/%3E%3C/svg%3E");
-          background-position: center left 0.5em;
-          background-repeat: no-repeat;
-          background-size: 1.25rem;
-          -webkit-padding-start: 2.5rem;
-          padding-inline-start: 2.5rem;
-        }
-        [dir="rtl"] input[type="search"] {
-          background-position: center right 0.5em;
-        }
-      }
-      /*------------------------------------*\
-    #Meta info
+    
+      /*
+    Meta info
 \*------------------------------------*/
       .meta {
         border-bottom: solid 1px #bdbdbd;
@@ -2415,8 +2028,8 @@ across entire card using pseudo element
         padding-top: 0.625rem;
       }
 
-      /*------------------------------------*\
-    #Family/Series list
+      /*
+    Family/Series list
 \*------------------------------------*/
       .family-grouping {
         padding-top: 2.5rem;
@@ -2426,97 +2039,7 @@ across entire card using pseudo element
         margin-top: 1rem;
       }
 
-     /*--------------------------------------------------*\
-    #Niveaux de maturité
-\*---------------------------------------------------*/
-      .maturity-level {
-        background-color: rgba(206, 205, 205, 0.5);
-        border-radius: 0.25rem;
-        display: inline-block;
-        margin-bottom: 0.3125rem;
-        padding: 0.15625rem 0.3125rem;
-      }
-
-      .maturity-level--note {
-        background-color: transparent;
-      }
-
-      .maturity-level--highlighted {
-        background-color: #005a9c;
-        color: #fff;
-      }
-
-      /*------------------------------------------------ --*\
-    #Niveaux de maturité
-\*------------------------------------------------ ---*/
-      .pagination {
-        margin-top: 2.5rem;
-      }
-
-      .l-cluster.pagination > * {
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-
-      .l-cluster.pagination > * > * {
-        display: inline-block;
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-
-      .pagination + * {
-        border-top: solid 1px #bdbdbd;
-        margin-top: 2.0625rem;
-      }
-
-      @media screen and (min-width: 64em) {
-        .pagination__list {
-          justify-content: center;
-        }
-      }
-      .pagination__list a {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        color: #000;
-        display: block;
-        text-decoration: none;
-        padding: 0.6875rem 1.125rem;
-      }
-      .pagination__list a:visited {
-        color: #000;
-      }
-      .pagination__list a:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-        color: #000;
-        text-decoration: none;
-      }
-      .pagination__list a[href]:hover {
-        text-decoration: underline;
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-      .pagination__list a[href][aria-current] {
-        background-color: #005797;
-        color: #fff;
-        font-weight: bold;
-      }
-      .pagination__list a[href][aria-current]:hover {
-        color: #fff;
-        text-decoration: none;
-      }
-      .pagination__list a[href][aria-current]:focus {
-        color: #000;
-      }
-
-     
-
+    
       /*------------------------------------*\
     #Pre-footer items
 \*------------------------------------*/
@@ -2539,9 +2062,9 @@ across entire card using pseudo element
         display: block;
       }
 
-      /*------------------------------------*\
-    #Global footer
-\*------------------------------------*/
+      /*
+    Global footer
+*/
       .global-footer {
         border-top: solid 1px #bdbdbd;
         grid-row-start: 2;
@@ -2611,72 +2134,19 @@ across entire card using pseudo element
           #f9dc4a
         );
       }
+    
 
-      /*------------------------------------*\
-    #Templates
-\*------------------------------------*/
-      /*------------------------------------*\
-    #Default page
-\*------------------------------------*/
-      .default .content {
-        max-width: 47rem;
-      }
 
-      @supports (grid-column-gap: 8%) {
-        .default .content {
-          max-width: none;
-        }
-        @media screen and (min-width: 64em) {
-          .default .content {
-            display: grid;
-            grid-column-gap: 7.857%;
-            grid-template-areas: "article related";
-            grid-template-columns: 67.143% 25%;
-          }
-        }
-        @media screen and (min-width: 64em) {
-          .default .content article {
-            grid-area: article;
-          }
-        }
-        @media screen and (min-width: 64em) {
-          .default .content .related {
-            grid-area: related;
-          }
-        }
-      }
-      
-
-      @supports (grid-column-gap: 8%) {
-        @media screen and (min-width: 64em) {
-          .default .related {
-            margin-top: 0;
-          }
-        }
-      }
-      @media screen and (min-width: 64em) {
-        .default .related__inner {
-          -webkit-border-start: solid 1px #bdbdbd;
-          border-inline-start: solid 1px #bdbdbd;
-          padding-left: 1.25rem;
-          padding-right: 1.25rem;
-        }
-      }
-
-      .default .related__inner ul a {
-        display: inline-block;
-        padding-bottom: 0.625rem;
-        padding-top: 0.625rem;
-      }
+     
 
       /*------------------------------------*\
     #Event
 \*------------------------------------*/
-      .event .content {
+       .content {
         max-width: 47rem;
       }
 
-      .event .intro {
+       .intro {
         display: flex;
         flex-direction: column;
         margin-bottom: 1.25rem;
@@ -2684,7 +2154,7 @@ across entire card using pseudo element
         margin-inline-start: 1.875rem;
         position: relative;
       }
-      .event .intro::before {
+       .intro::before {
         border-radius: 0.3125rem;
         content: "";
         height: 100%;
@@ -2693,35 +2163,33 @@ across entire card using pseudo element
         top: 0;
         width: 0.3125rem;
       }
-      .event .intro.conference::before {
+      
+
+       .intro.conference::before {
         background-color: #237978;
       }
-      .event .intro.meeting::before {
+       .intro.meeting::before {
         background-color: #1bc0d7;
       }
-      .event .intro.talk::before {
+       .intro.talk::before {
         background-color: #f9c818;
       }
-      .event .intro.workshop::before {
+       .intro.workshop::before {
         background-color: #e93737;
       }
-      .event .intro h1 {
+       .intro h1 {
         margin-bottom: 0;
       }
-      .event .intro h1 + * {
+       .intro h1 + * {
         font-size: 1.5rem;
         line-height: 1.4;
         margin-bottom: 0.625rem;
         order: -1;
       }
 
-      [dir="rtl"] .event .intro::before {
-        left: auto;
-        right: -1.75rem;
-      }
-
-      .event .lead,
-      .event .calendar-link {
+      
+       .lead,
+       .calendar-link {
         margin-bottom: 1.25rem;
       }
 
@@ -2887,23 +2355,7 @@ across entire card using pseudo element
         padding-top: 2.5rem;
       }
 
-      @media screen and (min-width: 48em) {
-        [dir="rtl"] .post .meta dl dd:first-of-type {
-          padding-left: 9.375rem;
-          padding-right: 0;
-        }
-      }
-      [dir="rtl"] .post .meta dl dt {
-        float: right;
-        margin-left: 1em;
-        margin-right: 0;
-      }
-      @media screen and (min-width: 48em) {
-        [dir="rtl"] .post .skip-to-comments {
-          left: 0;
-          right: auto;
-        }
-      }
+     
 
       .post__notes {
         border-top: solid 1px #bdbdbd;
