@@ -1,2650 +1,1948 @@
-
-
-
-          /* Toutes mes class on été généré automatiquement gace à l'extention   'IntelliSense for HTML CSS class names'. Cela m'a éviter de beaucoup refléchire sure les problère lier au nom des class.    */
-
-
-
-     
-     
-      /*------------------------------------*\
-    #Paths
-\*------------------------------------*/
-     
-      html {
-        line-height: 1.15; /* 1 */
-        -webkit-text-size-adjust: 100%; /* 2 */
-      }
-
-      /* Sections
-   ========================================================================== */
-      /**
- * Remove the margin in all browser.
- */
-      body {
-        margin: 0;
-      }
-
-      /**
- * Render the `main` element consistently in IE.
- */
-      main {
-        display: block;
-      }
-
-      /**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-      h1 {
-        font-size: 2em;
-        margin: 0.67em 0;
-      }
-
-      /* Grouping content
-   ========================================================================== */
-      /**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-      hr {
-        box-sizing: content-box; /* 1 */
-        height: 0; /* 1 */
-        overflow: visible; /* 2 */
-      }
-
-
-      /* Text-level semantics
-   ========================================================================== */
-      /**
- * Remove the gray background on active links in IE 10.
- */
-      a {
-        background-color: transparent;
-      }
-
-
-
-   
-
-      /**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-      sub,
-      sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline;
-      }
-
-      sub {
-        bottom: -0.25em;
-      }
-
-      sup {
-        top: -0.5em;
-      }
-
-      /* Embedded content
-   ========================================================================== */
-      /**
- * Remove the border on images inside links in IE 10.
- */
-      img {
-        border-style: none;
-      }
-
-      /**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-      button {
-        /* 1 */
-        text-transform: none;
-      }
-
-      /**
- Typographical styles for fonts are in 40-base/_typography.scss
- */
-      body {
-        background-color: #fff;
-        color: #111;
-        min-height: 100%;
-        overflow-x: hidden;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      /**
-Styles needed for a sticky footer
- */
-      .grid-wrap {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr auto;
-        min-height: 100vh;
-      }
-
-      /*------------------------------------*\
-    #Box sizing
-\*------------------------------------*/
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        font-family: inherit;
-        margin: 0;
-        overflow-wrap: break-word;
-        padding: 0;
-      }
-
-      /*------------------------------------*\
-    #Buttons
-
-    1. High contrast themes tend to eliminate background-color.
-    With no border set, we need to apply a transparent outline to
-    maintain the button shape. The negative outline-offset moves
-    the outline inside the perimeter so it behaves like a border.
-\*------------------------------------*/
-      button,
-      .button {
-        background-color: #005797;
-        border: solid 2px #005797;
-        border-radius: 1.5rem;
-        color: #fff;
-        display: inline-block;
-        font-size: 0.875rem;
-        font-weight: 600;
-        line-height: 1.5;
-        outline: 2px solid transparent; /* 1 */
-        outline-offset: -2px; /* 1 */
-        padding: 0.6875rem 1.5rem;
-      }
-      button:hover,
-      .button:hover {
-        background-color: #024488;
-        border-color: #024488;
-      }
-      button:focus,
-      button:active,
-      .button:focus,
-      .button:active {
-        color: #000;
-        background-color: #f9dc4a;
-        border-color: #000;
-      }
-
-      button:not([type="submit"]) {
-        text-align: start;
-      }
-
-      /**
-Remove link styling from links styled as buttons.
- */
-      .button {
-        text-decoration: none;
-      }
-
-      /**
-Remove link styling from actual buttons styled as buttons.
- */
-   
-
-      .button--wide {
-        text-align: center;
-        width: 100%;
-      }
-
-      .button--alt {
-        background-color: transparent;
-        color: #005797;
-      }
-      .button--alt:hover {
-        background-color: #cbe0fb;
-        color: #024488;
-      }
-      .button--alt:focus,
-      .button--alt:active {
-        background-color: #f9dc4a;
-        border-width: 3px;
-        color: #000;
-        padding: 0.625rem 1.4375rem;
-      }
-
-      .button--ferry0 {
-        background-color: transparent;
-        border-color: transparent;
-        border-radius: 0;
-        color: #000;
-        font-weight: normal;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .button--ferry0:hover {
-        background-color: transparent;
-        border-color: transparent;
-      }
-      .button--ferry0:focus {
-        background-color: transparent;
-        border-color: transparent;
-        color: #000;
-      }
-
-     
-      /*------------------------------------*\
-    #Focus
-\*------------------------------------*/
-      :focus {
-        /**
-  Ideally we would specify the background-color here to cover all circumstances.
-  Unfortunately, this does not work at all well for Internet Explorer, so we can't.
-   */
-        outline: 2px solid transparent;
-        outline-offset: -2px;
-      }
-
-      /**
-Where focus is moved to the target via JavaScript, it is
-acceptable not to show a focus outline.
- */
-      main:focus,
-      #main:focus,
-      [tabindex="-1"]:focus {
-        outline: none;
-      }
-
-      /**
-Search
- */
-      [type="search"]::-webkit-search-decoration,
-      [type="search"]::-webkit-search-cancel-button {
-        -webkit-appearance: none;
-        appearance: none;
-      }
-
-      /**
-Segmented options. Can use either radio or checkbox inputs. The purpose is to
-show all available options outright, rather than hide them behind a <select>
- */
-      .segmented-group-wrapper {
-        max-width: none;
-      }
-
-      .segmented-group.l-switcher {
-        margin-top: 0;
-      }
-      .segmented-group.l-switcher > * > * {
-        max-width: 100%;
-        min-width: 33.333%;
-        position: relative;
-      }
-      .segmented-group.l-switcher label {
-        border: 2px solid;
-        cursor: pointer;
-        display: block;
-        margin: 0.125rem;
-      }
-      .segmented-group.l-switcher label:before,
-      .segmented-group.l-switcher label:after {
-        content: "";
-        position: absolute;
-      }
-      .segmented-group.l-switcher label::before {
-        background: transparent;
-        height: 1.5rem;
-        left: 0.625rem;
-        top: 0.625rem;
-        width: 1.5rem;
-      }
-      .segmented-group.l-switcher label::after {
-        background: transparent;
-        border: solid;
-        border-top-color: transparent;
-        border-width: 0 0 3px 3px;
-        height: 0.40625rem;
-        left: 1rem;
-        opacity: 0;
-        top: 1.0625rem;
-        transform: rotate(-45deg);
-        width: 0.75rem;
-      }
-      .segmented-group.l-switcher input {
-        cursor: pointer;
-        height: 2.75rem;
-        margin: 0;
-        opacity: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 2.75rem;
-        z-index: 1;
-      }
-      .segmented-group.l-switcher .segmented-label {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        display: block;
-        padding: 0.625rem;
-        padding-left: 2.75rem;
-      }
-      .segmented-group.l-switcher .segmented-label > * + * {
-        margin-top: 0.5em;
-      }
-      .segmented-group.l-switcher .segmented-label span {
-        display: block;
-      }
-      .segmented-group.l-switcher .segmented-label span:first-of-type {
-        font-weight: bold;
-      }
-      .segmented-group.l-switcher > * > *:hover label {
-        background-color: #cbe0fb;
-      }
-      .segmented-group.l-switcher input:focus + label {
-        border-color: #f9dc4a;
-        box-shadow: inset 0 0 0 4px;
-        outline: solid 2px #f9dc4a;
-      }
-      .segmented-group.l-switcher input:checked + label::after {
-        opacity: 1;
-      }
-
-      
-
-      /**
-Progress bar
- */
-      .step-by-step {
-        margin-bottom: 1.875rem;
-      }
-      @media screen and (min-width: 48em) {
-        .step-by-step {
-          display: flex;
-          flex-wrap: wrap;
-        }
-      }
-
-      .step-by-step li {
-        position: relative;
-      }
-      .step-by-step li::after {
-        background-color: #545454;
-        bottom: -1rem;
-        content: "";
-        height: 0.8125rem;
-        left: 1.1875rem;
-        position: absolute;
-        width: 0.1875rem;
-      }
-      @media screen and (min-width: 48em) {
-        .step-by-step li::after {
-          bottom: auto;
-          height: 0.1875rem;
-          left: 50%;
-          top: 2rem;
-          width: 100%;
-          z-index: -1;
-        }
-      }
-      .step-by-step li + li {
-        margin-top: 1.25rem;
-      }
-     
-      .step-by-step li.complete::after {
-        background-color: #237978;
-      }
-
-      .step-by-step li:last-child::after {
-        display: none;
-      }
-
-    
-
-      .step-by-step a {
-        color: #545454;
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-      .step-by-step a:visited {
-        color: #920ba6;
-      }
-      .step-by-step a:hover {
-        color: #024488;
-      }
-      .step-by-step a:focus {
-        box-shadow: 0 0 0 2px;
-        color: #000;
-        outline: solid 3px #f9dc4a;
-        outline-offset: 2px;
-        text-decoration: none;
-      }
-      .step-by-step a:active {
-        color: #000;
-      }
-
-   
-
-      /*
- * hide1.
- */
-      [hidden] {
-        display: none !important;
-      }
-
-      /*
- * Hide2
- */
-      .every-header [role="status"],
-      .visuallyhidden:not(:focus):not(:active),
-      .skip-link:not(:focus):not(:active) {
-        border: 0;
-        clip: rect(0 0 0 0);
-        -webkit-clip-path: inset(100%);
-        clip-path: inset(100%);
-        height: 1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-      }
-
-      /*
- * Make sure that the siblings of hidden components do not cause the hidden
- * component to take up any vertical space.
- */
-      .visuallyhidden + *,
-      .skip-link + * {
-        margin-top: 0 !important;
-      }
-
-      br {
-        margin-top: 0;
-      }
-
-      /*
- * Restore an element that has been visually hidden, using the visually-hidden
- * placeholder (extend the placeholder with Sass to avoid it appearing
- * repeatedly in your markup).
- */
-      /*------------------------------------*\
-    #HTML elements
-\*------------------------------------*/
-      abbr {
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-
-      dfn {
-        font-style: normal;
-        font-weight: 600;
-      }
-
-      b,
-      strong,
-      .bold {
-        font-weight: 600;
-      }
-
-      em,
-      i {
-        font-style: italic;
-      }
-
-      small,
-      .small,
-      .small-caps {
-        font-size: 0.875rem;
-        line-height: 1.4285714286;
-      }
-
-      .small-caps {
-        text-shadow: 0 0 0 #111;
-        text-transform: uppercase;
-      }
-      
-
-       /*------------------------------------*\
-    #Icons
-\*------------------------------------*/
-      svg {
-        fill: currentColor;
-        height: auto;
-        width: 100%;
-      }
-
-      /**
-SVG icons are sized relative to font size, thanks to the em unit.
- */
-      .icon {
-        height: 1em;
-        vertical-align: baseline;
-        width: 1em;
-      }
-
-      .icon--larger {
-        height: 1.875rem;
-        width: 1.875rem;
-      }
-
-      .icon--beta {
-        height: 2.4375rem;
-        width: 3.8125rem;
-      }
-
-      /**
-Use the `with-icon` class on the SVG's parent, if there
-is a need to specify the spacing between text and icon.
-Pay attention to whether the icon is before the text or after.
-
-2. Logical property creates appropriate spacing irrespective of text direction
- */
-      .with-icon--before,
-      .with-icon--after,
-      .with-icon--larger {
-        align-items: baseline;
-        display: inline-flex;
-      }
-      .with-icon--before .icon,
-      .with-icon--after .icon,
-      .with-icon--larger .icon {
-        flex: 0 0 auto;
-      }
-
-      .with-icon--larger {
-        align-items: center;
-      }
-
-      .with-icon--before .icon {
-        margin-right: 0.5rem;
-      }
-      @supports ((-webkit-margin-end: 1em) or (margin-inline-end: 1em)) {
-        .with-icon--before .icon {
-          margin-right: 0;
-          -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem; /* 2 */
-        }
-      }
-
-      .with-icon--after .icon {
-        margin-left: 0.5rem;
-      }
-      @supports ((-webkit-margin-start: 1em) or (margin-inline-start: 1em)) {
-        .with-icon--after .icon {
-          margin-left: 0;
-          -webkit-margin-start: 0.5rem;
-          margin-inline-start: 0.5rem; /* 2 */
-        }
-      }
-
-      
-      @supports ((-webkit-margin-start: 1em) or (margin-inline-start: 1em)) {
-        .with-icon--after .icon {
-          margin-right: 0;
-          -webkit-margin-start: 0.5rem;
-          margin-inline-start: 0.5rem; /* 2 */
-        }
-      }
-
-      /*------------------------------------*\
-    #Images
-\*------------------------------------*/
-      img {
-        height: auto;
-        max-width: 100%;
-      }
-
-      .avatar {
-        background-color: #fff;
-        border: solid 1px #005a9c;
-        border-radius: 50%;
-        height: 6.25rem;
-        overflow: hidden;
-        width: 6.25rem;
-      }
-      .avatar img {
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        width: 100%;
-      }
-
-      .avatar--med {
-        height: 3.125rem;
-        width: 3.125rem;
-      }
-      .avatar--med img {
-        margin-top: 0;
-      }
-
-      .avatar--small {
-        height: 2rem;
-        width: 2rem;
-      }
-      .avatar--small img {
-        margin-top: 0;
-      }
-
- 
-
-
-
-      a:not([class]),
-      a.with-icon--before,
-      a.with-icon--after {
-        border: 0;
-        color: #005797;
-        cursor: pointer;
-        padding-left: 0.125rem;
-        padding-right: 0.125rem;
-        text-decoration: underline; /* 1 */
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-      a:not([class]) svg,
-      a.with-icon--before svg,
-      a.with-icon--after svg {
-        fill: currentColor;
-      }
-      a:not([class]):visited,
-      a.with-icon--before:visited,
-      a.with-icon--after:visited {
-        color: #920ba6;
-      }
-      a:not([class]):hover,
-      a.with-icon--before:hover,
-      a.with-icon--after:hover {
-        color: #024488;
-        outline-width: 0; /* 2 */
-      }
-      a:not([class]):focus,
-      a.with-icon--before:focus,
-      a.with-icon--after:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-        color: #000;
-        text-decoration: none;
-      }
-      a:not([class]):active,
-      a.with-icon--before:active,
-      a.with-icon--after:active {
-        color: #000;
-        outline-width: 0; /* 2 */
-      }
-
-
-
-      /*
-    #Lists
- */
-      ol[class],
-      ul[class] {
-        list-style: none;
-        padding: 0;
-      }
-
-      ul:not([class]),
-      ol:not([class]),
-      ol.counter {
-        -webkit-padding-start: 2.4em;
-        padding-inline-start: 2.4em;
-      }
-      ul:not([class]) > * + *,
-      ul:not([class]) li ul,
-      ul:not([class]) li ol,
-      ol:not([class]) > * + *,
-      ol:not([class]) li ul,
-      ol:not([class]) li ol,
-      ol.counter > * + *,
-      ol.counter li ul,
-      ol.counter li ol {
-        margin-top: 0.75em;
-      }
-
-      ol.counter ::marker {
-        content: counters(list-item, ".") ". ";
-      }
-
-      .clean-list li {
-        display: block;
-      }
-
-
-      /*------------------------------------*\
-    #Skip link
-\*------------------------------------*/
-      .skip-link {
-        background-color: #f9dc4a;
-        border: solid 3px #000;
-        color: #000;
-        padding: 0.625em 0.9375em;
-        text-decoration: none;
-      }
-      .skip-link:active,
-      .skip-link:focus {
-        left: 0;
-        position: absolute;
-        top: 0;
-        z-index: 999;
-      }
-      .skip-link:active span,
-      .skip-link:focus span {
-        box-shadow: 0 -1px 0 0 inset;
-      }
-
-      
-
-      /*------------------------------------*\
-    #Social links
-\*------------------------------------*/
-      .social-links__item {
-        height: 3rem;
-        padding: 0.875rem;
-        width: 3rem;
-      }
-      .social-links__item .icon {
-        height: 1.25rem;
-        width: 1.25rem;
-      }
-      .social-links__item:hover .icon {
-        color: #024488;
-      }
-
-      /*------------------------------------*\
-    #Typography
-\*------------------------------------*/
-      body {
-        font-family: "Trebuchet MS", Geneva, sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.5;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-weight: 600;
-        margin: 0;
-      }
-
-      h1 {
-        margin-bottom: 1em;
-      }
-
-      h1,
-      .txt-venus {
-        font-size: 2.0625rem;
-        line-height: 1.303030303;
-      }
-      @media screen and (min-width: 48em) {
-        h1,
-        .txt-venus {
-          font-size: 2.625rem;
-          line-height: 1.4;
-        }
-      }
-
-      h2,
-      .txt-earth {
-        font-size: 1.6875rem;
-        line-height: 1.2444444444;
-      }
-      @media screen and (min-width: 48em) {
-        h2,
-        .txt-earth {
-          font-size: 2.125rem;
-          line-height: 1.2647058824;
-        }
-      }
-
-      h3,
-      .txt-mars {
-        font-size: 1.5rem;
-        line-height: 1.4;
-      }
-
-      h4,
-      .txt-jupiter {
-        font-size: 1.25rem;
-        line-height: 1.6;
-      }
-
-      h5,
-      .txt-saturn,
-      .post__notes h3 {
-        font-size: 1.125rem;
-        line-height: 1.5;
-      }
-
-      h6 {
-        font-size: 1rem;
-      }
-
-      .lead {
-        font-size: 1.4375rem;
-        line-height: 1.4;
-      }
-
-      .txt-pluto {
-        font-size: 0.9375rem;
-        line-height: 1.5em;
-      }
-
-        .bloc {
-        display: flex;
-        align-items: baseline; /* Aligne les éléments basés sur la ligne de base */
-                    }
-
-
-
-
-
-      .txt-eris {
-        font-size: 0.875rem;
-        line-height: 1.4285714286;
-      }
-
-      /**
-When Font Face Observer has detected that the @font-face files are loaded, then we
-can safely use the web fonts instead of the system fonts.
- */
-      .fonts-loaded body {
-        font-family: "Noto Sans", "Trebuchet MS", Geneva, sans-serif;
-      }
-
-    
-
-
-
-      /*
-    #Center layout primitive*/
-      .l-center.l-center {
-        box-sizing: content-box;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 70rem;
-        padding-left: 5vw;
-        padding-right: 5vw;
-      }
-
- 
-
-      /**
-We use flexbox to configure the elements into clusters without creating
-white space. We can control how we align items within the cluster,
-by using 'align-items` and `justify-content`.
- */
-      .l-cluster > * {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: -0.625rem;
-      }
-
-
-
-   
-\*------------------------------------*/
-      /**
-Suppress horizontal scrolling caused by the negative margin
-in some circumstances.
- */
-      .l-sidebar {
-        overflow: hidden;
-      }
-
-      /**
-Nous ciblons le wrapper intermédiaire et lui donnons une marge négative
-pour créer une gouttière entre le `.sidebar` et `.not-sidebar`.
- */
-      .l-sidebar > * {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: -0.75rem; /* 1 */
-      }
-
-      /**
-We apply an even, symmetrical margin to `.sidebar` and `.not-sidebar`,
-but halve it to to account for 'doubling up' at the edges.
- */
-      .l-sidebar > * > * {
-        margin: 0.75rem;
-      }
-
- /**
-Flex-basis détermine la largeur idéale du `.sidebar`. Cela peut être
-omis de laisser le contenu de `.sidebar` déterminer la largeur de
-`.sidebar` (par exemple une image avec une largeur maximale spécifiée).
- */
-      .l-sidebar .sidebar {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-basis: 18.75rem;
-        flex-grow: 1;
-      }
-      .l-sidebar .sidebar > * + * {
-        margin-top: 1em;
-      }
-
-      /**
-Min-width determines the point at which `.sidebar` and `.not-sidebar`
-will sit side-by-side rather than vertically. This negates the use of
-a viewport media query.
- */
-      .l-sidebar .not-sidebar {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-basis: 0;
-        flex-grow: 999;
-        min-width: calc(55% - 1.5rem);
-      }
-      .l-sidebar .not-sidebar > * + * {
-        margin-top: 1em;
-      }
-
-      .l-sidebar--expanded {
-        width: 100%;
-      }
-
-      .l-sidebar .sidebar.sidebar--compact {
-        flex-basis: 11.25rem;
-      }
-
-      .l-switcher {
-        overflow: hidden;
-      }
-
-      .l-switcher > * {
-        display: flex;
-        flex-flow: row wrap;
-      }
-
-      /** Détermine la largeur de l'élément dans la colonne unique, configuration verticale
-
- */
-      .l-switcher > * > * {
-        max-width: 100%; 
-        min-width: 50%;
-        width: calc(476100px - 69000%);
-      }
-
-
-
-      /*
-    #Global header core-*/
-      
-
-      .every-header {
-        background-color: #fff;
-      }
-
-      .every-header .banner {
-        background-color: #cbe0fb;
-        padding-bottom: 0.625rem;
-        padding-top: 0.625rem;
-      }
-
-      .every-header .banner__inner {
-        align-items: center;
-        display: flex;
-      }
-      .every-header .banner__inner .icon--beta {
-        flex: none;
-        width: 3.8125rem;
-      }
-      .every-header .banner__inner p {
-        font-size: 0.875rem;
-        line-height: 1.4285714286;
-      }
-      .every-header .banner__inner a {
-        color: #024488;
-      }
-      .every-header .banner__inner a:focus {
-        color: #000;
-      }
-
-      
-
-      #lang-nav {
-        background-color: #f8f8fb;
-      }
-      #lang-nav .l-cluster > * {
-        justify-content: flex-end;
-        margin: 0 -0.625rem;
-      }
-      #lang-nav .l-cluster.l-cluster > * > * {
-        margin: 0 0.625rem;
-      }
-      #lang-nav a {
-        font-size: 0.875rem;
-        line-height: 1.4285714286;
-        color: #111;
-        display: block;
-        padding-bottom: 0.75rem;
-        padding-top: 0.75rem;
-      }
-
-     
-     
-      /*------------------------------------*\
-    #Navigation core
-\*------------------------------------*/
-      #global-nav svg {
-        pointer-events: none;
-      }
-
-      #global-nav {
-        border-bottom: solid 1px #bdbdbd;
-        display: block;
-        padding-bottom: 1.125rem;
-        padding-top: 1.125rem;
-      }
-      @media screen and (min-width: 70em) {
-        #global-nav {
-          padding-bottom: 0;
-          padding-top: 1.25rem;
-        }
-      }
-
-      .global-nav__inner {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-      }
-      @media screen and (min-width: 70em) {
-        .global-nav__inner {
-          align-items: flex-end;
-          flex-wrap: nowrap;
-          position: relative;
-        }
-      }
-
-      .global-nav__inner > ul {
-        background-color: #fff;
-        display: flex;
-        flex-basis: 100%;
-        flex-wrap: wrap;
-        padding-bottom: 2.8125rem;
-        width: 100%;
-      }
-      @media screen and (min-width: 70em) {
-        .global-nav__inner > ul {
-          flex-basis: auto;
-          flex-wrap: nowrap;
-          padding-bottom: 0;
-        }
-      }
-
-      @media screen and (min-width: 70em) {
-        li.top-nav-item + li.top-nav-item {
-          -webkit-margin-start: 0.25rem;
-          margin-inline-start: 0.25rem;
-        }
-      }
-
-      @media screen and (min-width: 70em) {
-        .global-nav__inner > ul > li:last-child {
-          -webkit-margin-start: auto;
-          margin-inline-start: auto;
-        }
-      }
-
-      .global-nav__inner .top-nav-item {
-        border-bottom: solid 1px #bdbdbd;
-        flex-basis: 100%;
-      }
-      @media screen and (min-width: 70em) {
-        .global-nav__inner .top-nav-item {
-          border-bottom: none;
-          flex-basis: auto;
-        }
-      }
-
-      .nav-link {
-        color: #111;
-        display: block;
-        padding: 0.625rem 0;
-        position: relative;
-        text-decoration: none;
-      }
-      @media screen and (min-width: 70em) {
-        .nav-link {
-          display: inline-block;
-        }
-      }
-
-      .global-nav__inner .top-nav-item > .nav-link {
-        font-weight: 600;
-      }
-
-      .logo-link:focus {
-        box-shadow: 0 0 0 3px #000;
-        outline: solid 3px #f9dc4a;
-        outline-offset: 3px;
-      }
-      @media screen and (min-width: 70em) {
-        .logo-link {
-          -webkit-margin-end: 1.5625rem;
-          margin-inline-end: 1.5625rem;
-          padding-bottom: 0.3125rem;
-          position: relative;
-        }
-        .logo-link::before {
-          background-color: #005a9c;
-          bottom: 0;
-          content: "";
-          display: none;
-          height: 0.1875rem;
-          left: 0;
-          position: absolute;
-          width: 100%;
-        }
-        .logo-link:hover::before {
-          display: block;
-        }
-      }
-
-      .icon-link {
-        align-items: center;
-        color: #111;
-        display: flex;
-        min-height: 2.75rem;
-        text-decoration: none !important;
-      }
-      @media screen and (min-width: 70em) {
-        .icon-link {
-          display: inline-flex;
-          justify-content: center;
-          height: 100%;
-          min-width: 2.75rem;
-        }
-      }
-      .icon-link::before {
-        bottom: 0 !important;
-      }
-      .icon-link:visited,
-      .icon-link:hover {
-        color: #111 !important;
-      }
-      .icon-link:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-        color: #000;
-      }
-      .icon-link .hide-at-max-width {
-        -webkit-margin-start: 0.625rem;
-        margin-inline-start: 0.625rem;
-      }
-      @media screen and (min-width: 70em) {
-        .icon-link .hide-at-max-width {
-          border: 0;
-          clip: rect(0 0 0 0);
-          -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-          height: 1px;
-          -webkit-margin-start: 0;
-          margin-inline-start: 0;
-          overflow: hidden;
-          padding: 0;
-          position: absolute;
-          white-space: nowrap;
-          width: 1px;
-        }
-      }
-
-      .account-login {
-        flex-basis: 100%;
-        font-size: 0.875rem !important;
-      }
-      @media screen and (min-width: 70em) {
-        .account-login {
-          flex-basis: auto;
-          padding-bottom: 0.625rem;
-          padding-top: 0.625rem;
-        }
-      }
-
-      @media screen and (min-width: 70em) {
-        .global-nav__inner .top-nav-item > *:first-child {
-          font-size: 1rem;
-          height: 100%;
-          line-height: 1.6875rem;
-          padding: 0.625rem 0.3125rem 0.4375rem !important;
-          position: relative;
-          white-space: nowrap;
-        }
-        .global-nav__inner .top-nav-item > *:first-child::before {
-          background-color: #005a9c;
-          bottom: -0.125rem;
-          content: "";
-          display: none;
-          height: 0.1875rem;
-          left: 0;
-          position: absolute;
-          width: 100%;
-        }
-        .global-nav__inner .top-nav-item > *:first-child:hover::before {
-          display: block;
-        }
-        .global-nav__inner .top-nav-item > *:first-child:focus {
-          background-color: #f9dc4a;
-          background-image: linear-gradient(
-            to top,
-            #000 3px,
-            #f9dc4a 3px,
-            #f9dc4a
-          );
-          color: #000;
-        }
-        .global-nav__inner .top-nav-item > *:first-child:focus:hover::before {
-          display: none;
-        }
-      }
-
-      .global-nav__inner .nav__submenu {
-        display: none;
-      }
-
-      #archive-nav ul,
-      #category-nav ul {
-        background-color: #fff;
-        border: solid 1px #bdbdbd;
-        height: 11.25rem;
-        overflow: auto;
-      }
-      #archive-nav ul a,
-      #category-nav ul a {
-        display: block;
-        padding: 0.625rem;
-      }
-
-      /*
-    #Breadcrumbs*/
-
-      #breadcrumb {
-        padding-bottom: 0.9375rem;
-        padding-top: 0.625rem;
-      }
-      #breadcrumb .l-cluster > * {
-        margin: 0 -0.6875rem;
-      }
-      #breadcrumb .l-cluster.l-cluster > * > * {
-        margin: 0 0 0 0.6875rem;
-        padding-right: 1em;
-        position: relative;
-      }
-
-     
-      .breadcrumbs a {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        color: #111;
-        display: block;
-        padding-bottom: 0.6875rem;
-        padding-top: 0.6875rem;
-      }
-      .breadcrumbs a:visited,
-      .breadcrumbs a:hover,
-      .breadcrumbs a:active {
-        color: #111;
-      }
-
-      .breadcrumbs [aria-current] {
-        font-weight: 600;
-        text-decoration: none;
-      }
-      .breadcrumbs [aria-current]:hover,
-      .breadcrumbs [aria-current]:focus {
-        outline-color: #111;
-      }
-
-    
-
- 
-
-      /*------------------------------------*\
-    Main
-
-      /**
-1. We use left and right padding to add some minimum space between the
-contents of <main> and the edges of the parent element or viewport.
-To avoid making the content narrower than intended, we add an exception
-to our global box-sizing rule.
- */
-      main,
-      #main {
-        box-sizing: content-box;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 70rem;
-        padding: 1.5rem 5vw 6.25rem;
-      }
-
-      #main .component + .component {
-        margin-top: 5rem;
-      }
-      @media screen and (min-width: 48em) {
-        #main .component + .component {
-          margin-top: 6.25rem;
-        }
-      }
-
-      #main .component.us + .component.us {
-        margin-top: 0;
-      }
-
-      /*------------------------------------*\
-    #Hero
-\*------------------------------------*/
-      .hero {
-        background-color: #f8f8fb;
-      }
-      @media screen and (min-width: 70em) {
-        .hero {
-          padding-top: 2.875rem;
-        }
-      }
-      .hero .l-sidebar > *,
-      .hero .l-sidebar > * > * {
-        margin: 0;
-      }
-      .hero .l-sidebar .sidebar {
-        flex-basis: 31.25rem;
-      }
-      .hero .l-sidebar .not-sidebar {
-        min-width: 50%;
-        padding-bottom: 1.875rem;
-      }
-      @media screen and (min-width: 70em) {
-        .hero .l-sidebar .not-sidebar > * {
-          max-width: 31.5rem;
-        }
-      }
-      .hero .lead {
-        margin-bottom: 1.125rem;
-        margin-top: 0;
-      }
-      .hero img {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      @media screen and (min-width: 48em) {
-        .hero img {
-          max-width: 31.25rem;
-        }
-      }
-
-      .hero h1 {
-        margin-bottom: 1rem;
-      }
-
-      .hero + * {
-        margin-top: 3.125rem;
-      }
-
-      .hero .button {
-        align-self: flex-start;
-      }
-
-      .super--listing {
-        background-color: #fff;
-        margin-bottom: 1.25rem;
-        padding-bottom: 2.5rem;
-      }
-      .super--listing + * {
-        margin-top: 0;
-      }
-
-      .super--listing .filters.l-switcher {
-        margin: -0.625rem;
-        overflow: visible;
-      }
-      .super--listing .filters.l-switcher > * > * {
-        min-width: 33.333%;
-        padding: 0.625rem;
-        width: calc(846400px - 92000%);
-      }
-
-      .super--listing .filters > div {
-        align-items: flex-end;
-      }
-      .super--listing .filters .field {
-        margin-top: 0;
-      }
-      .super--listing .filters .button--ferry0 {
-        padding-left: 0.1875rem;
-        padding-right: 0.1875rem;
-        text-decoration: underline; /* 1 */
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-      .super--listing .filters .button--ferry0:hover {
-        box-shadow: 0 0 4px 2px rgba(84, 84, 84, 0.25);
-      }
-      .super--listing .filters .button--ferry0:focus {
-        border-color: inherit;
-        box-shadow: inset 0 0 0 2px;
-        outline: solid 3px #f9dc4a;
-        outline-offset: 0;
-      }
-
-      .super--listing .browse {
-        margin: -0.625rem;
-        overflow: visible;
-      }
-      .super--listing .browse > * {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .super--listing .browse > * > * {
-        padding: 0.625rem;
-      }
-      .super--listing .browse h2 {
-        font-size: 1rem;
-        font-weight: normal;
-      }
-
-      /*
- * For the TR card, the language subheading is h5 for Family view and h3 for Search results view
- */
-      .translations h2,
-      .translations h3,
-      .translations h5,
-      .translations .sidebar span {
-        font-size: 1rem;
-        font-weight: normal;
-        padding-bottom: 0.625rem;
-        padding-top: 0.625rem;
-      }
-
-     
-      .ecosystem .translations {
-        padding: 0;
-        margin-top: 0;
-      }
-       .sidebar span,
-      .ecosystem .translations .sidebar span {
-        -webkit-padding-end: 1em;
-        padding-inline-end: 1em;
-      }
-       .l-sidebar .not-sidebar,
-      .ecosystem .translations .l-sidebar .not-sidebar {
-        min-width: 70%;
-        padding-bottom: 0;
-      }
-    
-
-      /*------------------------------------*\
-    #Table of contents (TOC)
-\*------------------------------------*/
-      .toc {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .toc > * + * {
-        margin-top: 1em;
-      }
-
-      .toc + * {
-        margin-top: 1.875rem;
-      }
-      @media screen and (min-width: 70em) {
-        .toc + * {
-          margin-top: 5rem;
-        }
-      }
-
-      .toc h2 {
-        font-size: 1rem;
-        font-weight: normal;
-      }
-
-      .toc ul {
-        border-left: solid 3px #f9c818;
-        padding-left: 0.9375rem;
-      }
-
-      
-      .toc ul a {
-        display: inline-block;
-        padding-bottom: 0.625rem;
-        padding-top: 0.625rem;
-      }
-
-
-    /*
-    Texte composant */
-      .component--text > * + * {
-        margin-top: 1em;
-      }
-
-      .component--text > * {
-        max-width: 41.25rem;
-      }
-      .component--text > * + h2,
-      .component--text > * + h3,
-      .component--text > * + h4,
-      .component--text > * + h5,
-      .component--text > * + h6 {
-        margin-top: 2em;
-      }
-
-      .component--text button,
-      .component--text .button {
-        align-self: flex-start; /* 1 */
-      }
-
-     /*--------------------------------------------------*\
-    #Composant image
-\*---------------------------------------------------*/
-      .component--image figcaption {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        -webkit-margin-before: 1em;
-        margin-block-start: 1em;
-      }
-      .component--image figcaption > * + * {
-        margin-top: 1em;
-      }
-      .component--image figcaption > * {
-        max-width: 33.75rem;
-      }
-      .component--image figcaption > a {
-        align-self: flex-start;
-        display: inline-block;
-        margin: 0;
-        padding-bottom: 0.625rem;
-        padding-top: 0.625rem;
-      }
-
-     
-    /*--------------------------------------------------*\
-    #Cartes
-\*---------------------------------------------------*/
-      .card {
-        background-color: #fff;
-        border-radius: 0.25rem;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      .card--event {
-        border-left: solid 0.375rem;
-      }
-
-      
-
-      .card--event,
-      .card--member,
-      .card--news,
-      .card--group {
-        box-shadow: -1px 1px 4px 0 rgba(55, 70, 95, 0.12);
-      }
-
-      .card--event.conference {
-        border-color: #237978;
-      }
-      .card--event.meeting {
-        border-color: #1bc0d7;
-      }
-      .card--event.talk {
-        border-color: #f9c818;
-      }
-      .card--event.workshop {
-        border-color: #e93737;
-      }
-
-      .bloc {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-grow: 1;
-        order: 1;
-        padding-top: 1rem;
-      }
-      .bloc > * + * {
-        margin-top: 1rem;
-      }
-
-      .card--group .bloc {
-        max-width: 41.25rem;
-      }
-
-      .bloc > a:not([class]) {
-        align-self: flex-start;
-        margin-top: 0.375rem;
-        padding-bottom: 0.625rem;
-        padding-top: 0.625rem;
-      }
-
-      .card__heading {
-        font-size: 1.125rem;
-        line-height: 1.5;
-      }
-
-      .card__image img {
-        border-radius: 0.25rem;
-      }
-
-      .card__link {
-        border: 0;
-        color: #111;
-        text-decoration: none;
-      }
-      .card__link:hover {
-        text-decoration: underline; /* 1 */
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-      .card__link:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-        color: #000;
-        text-decoration: none;
-      }
-
-      .card--user.l-sidebar {
-        padding-bottom: 1.875rem;
-        padding-top: 2.5rem;
-      }
-      .card--user.l-sidebar .sidebar {
-        flex-basis: auto;
-        order: -1;
-      }
-      .card--user.l-sidebar .sidebar img {
-        width: 6.25rem;
-      }
-      .card--user.l-sidebar .not-sidebar {
-        min-width: calc(70% - 1.5rem);
-      }
-      .card--user.l-sidebar .not-sidebar > div {
-        max-width: 41.25rem;
-      }
-      .card--user.l-sidebar .not-sidebar > div > * + * {
-        margin-top: 1.25rem;
-      }
-      .card--user.l-sidebar .l-cluster > * {
-        align-items: center;
-      }
-      .card--user.l-sidebar .l-cluster > *,
-      .card--user.l-sidebar .l-cluster.l-cluster > * > * {
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-      .card--user.l-sidebar .l-cluster a {
-        display: inline-block;
-        padding: 0.75rem 0;
-      }
-
-
-      /*------------------------------------*\
-    #50 50
-\*------------------------------------*/
-      @media screen and (min-width: 48em) {
-        .component--fifty-fifty {
-          align-items: flex-start;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        }
-      }
-      .component--fifty-fifty > * + * {
-        margin-top: 1rem;
-      }
-      @media screen and (min-width: 48em) {
-        .component--fifty-fifty > * + * {
-          margin-top: 0;
-        }
-      }
-
-      .component--fifty-fifty__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .component--fifty-fifty__text > * + * {
-        margin-top: 1.875rem;
-      }
-      @media screen and (min-width: 48em) {
-        .component--fifty-fifty__text {
-          flex-basis: 52%;
-        }
-      }
-      @media screen and (min-width: 64em) {
-        .component--fifty-fifty__text {
-          flex-basis: 45%;
-        }
-      }
-
-      .composent50/50 .l-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .composent50/50 .l-box > * + * {
-        margin-top: 1rem;
-      }
-      .component--fifty-fifty__text .l-box a {
-        align-self: flex-start;
-      }
-
-      @media screen and (min-width: 48em) {
-        .component--fifty-fifty .image,
-        .component--fifty-fifty .illustration {
-          flex-basis: 45%;
-        }
-      }
-
-      .component--fifty-fifty .image img {
-        border-radius: 0.25rem;
-      }
-
-      .component--fifty-fifty .image .l-frame {
-        padding-bottom: 66.67%;
-      }
-      @media screen and (min-width: 48em) {
-        .component--fifty-fifty .image .l-frame {
-          padding-bottom: 100%;
-        }
-      }
-
-      .component--fifty-fifty .illustration .l-frame {
-        padding-bottom: 75%;
-      }
-
-      @media screen and (min-width: 48em) {
-        .component--fifty-fifty.reversed .component--fifty-fifty__text {
-          order: -1;
-        }
-      }
-
-      /*------------------------------------*\
-    #Evangelists
-\*------------------------------------*/
-      
-
-    
-     
-      /*------------------------------------*\
-    #Group list
-\*------------------------------------*/
-      .component--group-list {
-        background-color: #f8f8fb;
-        padding-bottom: 3.125rem;
-        padding-top: 3.125rem;
-      }
-
-      .component-__intro {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        max-width: 41.25rem;
-        margin-bottom: 1.875rem;
-      }
-      .component--group-list__intro > * + * {
-        margin-top: 1em;
-      }
-
-      /*------------------------------------*\
-    #Members grid
-\*------------------------------------*/
-      .component--members {
-        background-color: #f8f8fb;
-        padding-bottom: 1.5625rem;
-        padding-top: 1.5625rem;
-      }
-
-      .component--members .l-center {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .component--members .l-center > * + * {
-        margin-top: 1em;
-      }
-      .component--members .l-center > h2,
-      .component--members .l-center > p {
-        max-width: 41.25rem;
-      }
-
-      .component--members__grid {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      @supports (display: grid) {
-        .component--members__grid {
-          display: grid;
-          grid-auto-rows: minmax(10.625rem, auto);
-          grid-gap: 1.25rem;
-          grid-template-columns: repeat(auto-fill, minmax(10.625rem, 1fr));
-        }
-      }
-
-      .component--members__grid figure {
-        align-items: center;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1.25rem;
-        margin-left: 0.625rem;
-        margin-right: 0.625rem;
-        flex: 1 1 10.625rem;
-        position: relative;
-      }
-      @supports (display: grid) {
-        .component--members__grid figure {
-          margin: 0;
-        }
-      }
-
-      .component--members__grid figcaption {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        font-weight: bold;
-        margin: 0.625rem;
-        text-align: center;
-      }
-
-      .component--members__grid .l-box {
-        max-width: 10.625rem;
-      }
-
-      .component--members__grid + a {
-        align-self: flex-start;
-      }
-
-      .component--members__cta > * {
-        align-items: center;
-      }
-
-      .component--members__cta > * > *:not(a) {
-        flex-basis: 100%;
-      }
-      @media screen and (min-width: 48em) {
-        .component--members__cta > * > *:not(a) {
-          flex-basis: auto;
-        }
-      }
-
-    
-
-     
-     /*--------------------------------------------------*\
-    #Crosslinks
-\*---------------------------------------------------*/
-      .crosslinks {
-        background-color: #005a9c;
-        color: #fff;
-        padding-bottom: 3.125rem;
-        padding-top: 3.125rem;
-      }
-
-      .crosslinks .component--columns__intro h2 {
-        font-size: 1.5rem;
-        line-height: 1.4;
-      }
-
-      .crosslinks .component--columns__intro a,
-      .crosslinks .component--columns__intro a:visited,
-      .crosslinks .component--columns__intro a:hover,
-      .crosslinks .component--columns__intro a:active {
-        color: #fff;
-      }
-
-      @media screen and (min-width: 43.75em) {
-        .crosslinks .component--columns--images > ul {
-          display: flex;
-          flex-wrap: wrap;
-          margin: -1.5%;
-        }
-      }
-      @media screen and (min-width: 43.75em) {
-        .crosslinks .component--columns--images > ul > li {
-          flex: 1 0 50%;
-          max-width: 50%;
-          padding: 1.5%;
-        }
-      }
-      @media screen and (min-width: 43.75em) {
-        .crosslinks .component--columns--images > ul li + li {
-          margin-top: 0;
-        }
-      }
-
-      @media screen and (min-width: 43.75em) {
-        .crosslinks
-          .component--columns--images
-          li:nth-last-child(n + 3):nth-last-child(-n + 3):first-child,
-        .crosslinks
-          .component--columns--images
-          li:nth-last-child(n + 3):nth-last-child(-n + 3):first-child
-          ~ li {
-          flex-basis: 33%;
-        }
-      }
-      @media screen and (min-width: 64em) {
-        .crosslinks
-          .component--columns--images
-          li:nth-last-child(n + 4):nth-last-child(-n + 4):first-child,
-        .crosslinks
-          .component--columns--images
-          li:nth-last-child(n + 4):nth-last-child(-n + 4):first-child
-          ~ li {
-          flex-basis: 25%;
-        }
-      }
-
-      .crosslinks .card {
-        background-color: #fff;
-        border-radius: 0.25rem;
-        color: #111;
-        overflow: hidden;
-      }
-
-      .crosslinks .bloc {
-        padding: 1.25rem;
-      }
-
-      .crosslinks .card__image img {
-        border-radius: 0;
-      }
-
-      /*------------------------------------*\
-    #Recherche
-\*------------------------------------*/
-     
-
-      .l-sidebar.search {
-        overflow: visible;
-      }
-
-      .l-sidebar.search > * {
-        margin: -0.75rem;
-      }
-
-      .l-sidebar.search > * > * {
-        margin: 0.75rem;
-      }
-
-      .l-sidebar.search form .sidebar {
-        flex-basis: auto;
-      }
-
-      .l-sidebar.search form .not-sidebar {
-        min-width: 70%;
-      }
-
-      .l-sidebar.search input[type="search"] {
-        max-width: none;
-      }
-
-    
-      /*
-    Meta info
-\*------------------------------------*/
-      .meta {
-        border-bottom: solid 1px #bdbdbd;
-        border-top: solid 1px #bdbdbd;
-        margin-bottom: 3.125rem;
-        padding: 1.5rem 0;
-      }
-
-      .meta .with-link {
-        padding-bottom: 0.625rem;
-        padding-top: 0.625rem;
-      }
-
-      /*
-    Family/Series list
-\*------------------------------------*/
-      .family-grouping {
-        padding-top: 2.5rem;
-      }
-
-      .family-grouping h2 + * {
-        margin-top: 1rem;
-      }
-
-    
-      /*------------------------------------*\
-    #Pre-footer items
-\*------------------------------------*/
-      .pre-footer.l-switcher {
-        margin: -1.25rem;
-      }
-
-      .pre-footer.l-switcher > * > * {
-        margin-top: 2.5rem;
-        min-width: 33.333%;
-        padding: 1.25rem;
-        width: calc(846400px - 92000%);
-      }
-
-      .pre-footer h2 + * {
-        margin-top: 1em;
-      }
-
-      .pre-footer a {
-        display: block;
-      }
-
-      /*
-    Global footer
-*/
-      .global-footer {
-        border-top: solid 1px #bdbdbd;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        padding: 1.25rem 0 1.5625rem;
-      }
-      .global-footer .l-center {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .global-footer .l-center > * + * {
-        margin-top: 1rem;
-      }
-      .global-footer a,
-      .global-footer .copyright {
-        font-size: 0.875rem;
-        line-height: 1.4285714286;
-      }
-      .global-footer a {
-        color: #111;
-      }
-      .global-footer a:visited,
-      .global-footer a:hover,
-      .global-footer a:active {
-        color: #111;
-      }
-
-      .global-footer__links {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .global-footer__links > ul {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      @media screen and (min-width: 64em) {
-        .global-footer__links > ul {
-          -webkit-margin-start: auto;
-          margin-inline-start: auto;
-        }
-      }
-      .global-footer__links .l-cluster > * {
-        margin: 0 -0.625rem;
-      }
-      .global-footer__links .l-cluster.l-cluster > * > * {
-        margin: 0 0.625rem;
-      }
-      .global-footer__links a:not([class]) {
-        display: block;
-        padding-bottom: 0.75rem;
-        padding-top: 0.75rem;
-      }
-      .global-footer__links .with-icon--larger {
-        padding: 0.75rem;
-      }
-      .global-footer__links .with-icon--larger img {
-        height: 1.25rem;
-        width: 1.25rem;
-      }
-      .global-footer__links .with-icon--larger:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-      }
-    
-
-
-     
-
-      /*------------------------------------*\
-    #Event
-\*------------------------------------*/
-       .content {
-        max-width: 47rem;
-      }
-
-       .intro {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1.25rem;
-        -webkit-margin-start: 1.875rem;
-        margin-inline-start: 1.875rem;
-        position: relative;
-      }
-       .intro::before {
-        border-radius: 0.3125rem;
-        content: "";
-        height: 100%;
-        left: -1.75rem;
-        position: absolute;
-        top: 0;
-        width: 0.3125rem;
-      }
-      
-
-       .intro.conference::before {
-        background-color: #237978;
-      }
-       .intro.meeting::before {
-        background-color: #1bc0d7;
-      }
-       .intro.talk::before {
-        background-color: #f9c818;
-      }
-       .intro.workshop::before {
-        background-color: #e93737;
-      }
-       .intro h1 {
-        margin-bottom: 0;
-      }
-       .intro h1 + * {
-        font-size: 1.5rem;
-        line-height: 1.4;
-        margin-bottom: 0.625rem;
-        order: -1;
-      }
-
-      
-       .lead,
-       .calendar-link {
-        margin-bottom: 1.25rem;
-      }
-
-      /*------------------------------------*\
-    #Home page
-\*------------------------------------*/
-      .home .hero {
-        background-color: #fff;
-      }
-      .home .component--members {
-        padding-bottom: 2.5rem;
-        padding-top: 2.5rem;
-      }
-      .home .component--members__grid {
-        margin-top: 2.5rem;
-      }
-
-      /*------------------------------------*\
-    #Post template
-\*------------------------------------*/
-      .post .content,
-      .post .rss {
-        max-width: 47rem;
-      }
-
-      @supports (grid-column-gap: 8%) {
-        .post .content {
-          max-width: none;
-        }
-        @media screen and (min-width: 64em) {
-          .post .content {
-            display: grid;
-            grid-column-gap: 7.857%;
-            grid-template-columns: 67.143% 25%;
-            grid-template-areas: "article related";
-          }
-        }
-        @media screen and (min-width: 64em) {
-          .post .content article {
-            grid-area: article;
-          }
-        }
-        @media screen and (min-width: 64em) {
-          .post .content .related {
-            grid-area: related;
-          }
-        }
-      }
-      .post .related {
-        margin-top: 2.5rem;
-      }
-
-      @supports (grid-column-gap: 8%) {
-        @media screen and (min-width: 64em) {
-          .post .content .related {
-            margin-top: 0;
-          }
-        }
-      }
-      .post .related__inner {
-        background-color: #f8f8fb;
-        padding: 1.75rem 1.25rem;
-      }
-      .post .related__inner h2 {
-        font-size: 1.1875rem;
-        line-height: 1.9411764706;
-      }
-      .post .related__inner h3 {
-        font-size: 1rem;
-        line-height: 1.3333333333;
-      }
-      .post .related__inner a {
-        color: #545454;
-      }
-      .post .related__inner a:focus {
-        color: #000;
-      }
-
-      .post .related__inner > div,
-      .post .related__inner h3 + * {
-        margin-top: 1.125rem;
-      }
-
-      .post .related__inner > div + div {
-        border-top: solid 1px #bdbdbd;
-        margin-top: 1.5rem;
-        padding-top: 0.9375rem;
-      }
-
-      .post .related__inner li {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-      }
-      .post .related__inner li + li {
-        margin-top: 1.375rem;
-      }
-
-      .post .sub-head {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        margin-bottom: 1.875rem;
-        margin-top: -1.25rem;
-      }
-      .post .meta {
-        position: relative;
-      }
-      @media screen and (min-width: 48em) {
-        .post .meta dl dd:first-of-type {
-          padding-right: 9.375rem;
-        }
-      }
-      .post .meta dl dd,
-      .post .meta dl dt {
-        margin: 0;
-        padding-bottom: 0.5rem;
-        padding-top: 0.3125rem;
-      }
-      .post .meta dl dt:first-of-type,
-      .post .meta dl dd:first-of-type {
-        padding-top: 0.5rem;
-      }
-      .post .meta dl dt {
-        float: left;
-        font-weight: normal;
-        margin-right: 1em;
-      }
-      .post .skip-to-comments,
-      .post .skip-to-comment-form {
-        color: #545454;
-        display: inline-block;
-        padding-bottom: 0.6875rem;
-        padding-top: 0.6875rem;
-        text-decoration: underline; /* 1 */
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-      .post .skip-to-comments:visited,
-      .post .skip-to-comment-form:visited {
-        color: #545454;
-      }
-      .post .skip-to-comments:focus,
-      .post .skip-to-comment-form:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-        color: #000;
-        text-decoration: none;
-      }
-      @media screen and (min-width: 48em) {
-        .post .skip-to-comments {
-          position: absolute;
-          right: 0;
-          top: 1.1875rem;
-        }
-      }
-      .post .rss {
-        border-top: solid 1px #bdbdbd;
-        padding-top: 2.5rem;
-      }
-
-     
-
-      .post__notes {
-        border-top: solid 1px #bdbdbd;
-        margin-top: 3.75rem;
-        padding-top: 1.25rem;
-      }
-      /*------------------------------------*\
-    #Landing page
-\*------------------------------------*/
-      .landing #breadcrumb,
-      .ecosystem #breadcrumb {
-        background-color: #f8f8fb;
-      }
-      .landing main,
-      .landing #main,
-      .ecosystem main,
-      .ecosystem #main {
-        padding-top: 0;
-      }
-      .landing .component--text,
-      .landing .component--image,
-      .landing .component--video,
-      .landing .component--quote,
-      .ecosystem .component--text,
-      .ecosystem .component--image,
-      .ecosystem .component--video,
-      .ecosystem .component--quote {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 44.4375rem;
-      }
-      .landing .component--quote,
-      .ecosystem .component--quote {
-        max-width: 43.1875rem;
-      }
-
-      /*------------------------------------*\
-    #Listing templates
-\*------------------------------------*/
-      .listing .wrap {
-        background-color: #f8f8fb;
-      }
-      .listing #breadcrumb {
-        background-color: #fff;
-      }
-      .listing main,
-      .listing #main {
-        padding-top: 0;
-      }
-
-      .people-list > * + *,
-      .post-list > * + * {
-        border-top: solid 1px #bdbdbd;
-      }
-
-      .people-list .groups .sidebar {
-        flex-basis: auto;
-      }
-      .people-list .groups .sidebar h3 {
-        font-size: 1rem;
-        font-weight: normal;
-        line-height: 2.75rem;
-      }
-
-      .post-list > * {
-        padding-bottom: 1.875rem;
-        padding-top: 2.5rem;
-      }
-      .post-list > li:last-child {
-        border-bottom: solid 1px #bdbdbd;
-      }
-      .post-list .l-sidebar .sidebar {
-        flex-basis: auto;
-      }
-      .post-list .l-sidebar .not-sidebar {
-        min-width: calc(70% - 1.5rem);
-      }
-      .post-list .l-sidebar .not-sidebar > div {
-        max-width: 41.25rem;
-      }
-      @media screen and (min-width: 64em) {
-        .post-list .l-sidebar .not-sidebar > div {
-          margin-bottom: 2.5rem;
-        }
-      }
-      .post-list .l-sidebar .not-sidebar > div > * + * {
-        margin-top: 1.25rem;
-      }
-      .post-list .l-sidebar .sidebar .l-frame {
-        height: 9.125rem;
-        width: 12.5rem;
-      }
-      .post-list .l-sidebar .sidebar .l-frame img {
-        border-radius: 0.25rem;
-      }
-      .post-list .l-cluster > * {
-        align-items: center;
-      }
-      .post-list .l-cluster a {
-        display: inline-block;
-        padding: 0.75rem 0;
-      }
-      .post-list h2 a {
-        color: #000;
-      }
-      .post-list h2 a .icon {
-        height: 0.8em;
-        width: 0.8em;
-      }
-
-      .event-list,
-      .member-list,
-      .tr-stats-list {
-        margin-top: 2.5rem;
-      }
-      .event-list > * + *,
-      .member-list > * + *,
-
-      .tr-stats-list > * + * {
-        margin-top: 1rem;
-      }
-      .event-list .card,
-      .member-list .card,
-       .card,
-      .tr-stats-list .card {
-        padding: 1rem;
-      }
-      .event-list .card.l-sidebar .sidebar,
-      .member-list .card.l-sidebar .sidebar,
-       .card.l-sidebar .sidebar,
-      .tr-stats-list .card.l-sidebar .sidebar {
-        flex-basis: auto;
-      }
-      .event-list .card.l-sidebar .not-sidebar,
-      .member-list .card.l-sidebar .not-sidebar,
-       .card.l-sidebar .not-sidebar,
-      .tr-stats-list .card.l-sidebar .not-sidebar {
-        min-width: calc(70% - 1.5rem);
-      }
-      .event-list .bloc,
-      .member-list .bloc,
-       .bloc,
-      .tr-stats-list .bloc {
-        padding-top: 0;
-      }
-
-      .event-list .card .l-cluster > * {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        align-items: center;
-      }
-      .event-list .card.l-sidebar .l-sidebar .sidebar {
-        flex-basis: 20rem;
-      }
-      .event-list .card.l-sidebar .l-sidebar .not-sidebar {
-        min-width: calc(55% - 1.5rem);
-      }
-      .event-list .card__image {
-        align-self: flex-start;
-        height: 6.25rem;
-        width: 6.25rem;
-      }
-      @media screen and (min-width: 64em) {
-        .event-list .card__image {
-          height: 12.5rem;
-          width: 12.5rem;
-        }
-      }
-      .event-list .card__image img {
-        border-radius: 0;
-      }
-      .event-list .date-location {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        display: flex;
-        flex-wrap: nowrap;
-        max-width: 18.75rem;
-      }
-      .event-list .date-location img {
-        -webkit-margin-end: 0.75rem;
-        margin-inline-end: 0.75rem;
-        width: 1.125rem;
-      }
-      .event-list .date-location .date-orig {
-        display: inline-block;
-        padding-bottom: 0.625rem;
-      }
-      .event-list .date-location > div:last-child {
-        -webkit-border-start: solid 1px #bdbdbd;
-        border-inline-start: solid 1px #bdbdbd;
-        -webkit-padding-start: 0.75rem;
-        padding-inline-start: 0.75rem;
-      }
-
-      .member-list .bloc > * {
-        max-width: 41.25rem;
-      }
-      .member-list .logo--member {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .archive-links h2 + * {
-        margin-top: 0.8em;
-      }
-
-      /*------------------------------------*\
-    #Group detail
-\*------------------------------------*/
-      .group .content {
-        max-width: 47rem;
-      }
-
-      @supports (grid-column-gap: 8%) {
-        .group .content {
-          max-width: none;
-        }
-        @media screen and (min-width: 64em) {
-          .group .content {
-            display: grid;
-            grid-column-gap: 7.857%;
-            grid-template-areas: "title nav" "details nav";
-            grid-template-columns: 67.143% 25%;
-            grid-template-rows: auto 1fr;
-          }
-        }
-        @media screen and (min-width: 64em) {
-          .group .content h1 {
-            grid-area: title;
-          }
-        }
-       
-
-
-        @media screen and (min-width: 64em) {
-          .group .content .details {
-            grid-area: details;
-          }
-        }
-      }
-      .group .group-nav__inner {
-        margin-bottom: 2.0625rem;
-      }
-      @media screen and (min-width: 64em) {
-        .group .group-nav__inner {
-          -webkit-border-start: solid 1px #bdbdbd;
-          border-inline-start: solid 1px #bdbdbd;
-          margin-bottom: 0;
-          padding-left: 1.25rem;
-          padding-right: 1.25rem;
-        }
-      }
-      .group .group-nav__inner [aria-current] {
-        font-weight: bold;
-      }
-
-      @media screen and (min-width: 64em) {
-        .group [data-toggle="true"] {
-          display: none;
-        }
-      }
-      .group [data-toggle="true"][aria-expanded="false"] {
-        margin-bottom: 2.0625rem;
-      }
-
-     
-    
-      h3 {
-        font-size: 1.5rem;
-        line-height: 1.4;
-      }
-     
-     
-
-
-
-
-      /**
-Change text-alignment at the "laptop" breakpoint,
-as defined in /10-settings/breakpoints
- */
-    
-
-     
-      .us {
-        left: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        position: relative;
-        right: 50%;
-        width: 100vw;
-      }
+<!DOCTYPE html>
+<html  >
+  <head>
+    <title>W3C</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+
+
+    <!-- Toutes mes class on été généré automatiquement gace à l'extention   'IntelliSense for HTML CSS class names'. Cela m'a éviter de beaucoup refléchire sure les problère lier au nom des class. -->
+
+
+
+  <body class="home">
+    <a class="skip-link" href="#">Skip to content</a>
+
+    <div class="grid-wrap">
+      <div class="wrap">
+        <!-- header start -->
+        <header class="every-header">
+          <span role="status" aria-live="polite"></span>
+          <div class="banner">
+            <div class="banner__inner l-center">
+              <p>
+                <span  
+                  >This is a new website.
+                  <a href="#">Give feedback</a>
+                  to help us improve it.</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- start nav 1 -->
+
+          <nav id="lang-nav" aria-label="Language options">
+            <div class="l-center">
+              <div class="l-cluster">
+                <ul class="clean-list" role="list">
+                  <li>
+                    <a href="#"
+                      >日本語ホームページ<span class="visuallyhidden" 
+                        >Japanese website</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                     
+                      >简体中文首页<span class="visuallyhidden" 
+                        >Chinese website</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- end nav 1 -->
+
+
+
+
+          
+
+          <!-- start nav 2 -->
+
+          <nav id="global-nav" aria-label="Main">
+            <div class="global-nav__inner l-center">
+              <a class="logo-link">
+                <span class="logo">
+                  <img
+                    src="img/w3c-no-bars.svg"
+                    alt="W3C"
+                    role="img"
+                  />
+                </span>
+                <span class="visuallyhidden">Visit the W3C homepage</span>
+              </a>
+              <button
+                type="button"
+                class="button button--ferry0 with-icon--after with-icon--larger"
+                data-trigger="mobile-nav"
+                style="display: none"
+              ></button>
+              <ul class="clean-list" data-component="nav-double-intro">
+                <li class="top-nav-item has-children">
+
+                  <a href="#" class="nav-link" style="display: flex;">
+                    Standards
+                    <img src="solid/angle-down.svg" alt="#" height="16" width="16" style="text-align: center; padding-left: 5px;">
+              
+                  </a>
+                  
+                  <div
+                    class="nav__submenu"
+                    data-nav="submenu"
+                    style="display: none"
+                  >
+                    <div class="l-center">
+                      <div class="nav__submenu__intro">
+                        <h2 class="nav__submenu__intro__heading">Standards</h2>
+                        <div class="nav__submenu__intro__text">
+                          <p>
+                            Understand the various specifications, their
+                            maturity levels on the web standards track, and
+                            their adoption.
+                          </p>
+                          <a href="#"
+                            >Explore web standards</a
+                          >
+                        </div>
+                      </div>
+                      <ul class="clean-list" role="list">
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            About W3C web standards
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            W3C standards and drafts
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Types of documents W3C publishes
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Translations of W3C standards and drafts
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Reviews and public feedback
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Liaisons
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Promote web standards
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+
+
+
+
+
+               <!-- groups -->
+
+                <li class="top-nav-item has-children">
+
+                  <a href="#" class="nav-link" style="display: flex;">
+                    Groups
+                    <img src="solid/angle-down.svg" alt="#" height="16" width="16" style="text-align: center; padding-left: 5px;">
+              
+                  </a>
+
+                  
+                  <div
+                    class="nav__submenu"
+                    data-nav="submenu"
+                    style="display: none"
+                  >
+                    <div class="l-center">
+                      <div class="nav__submenu__intro">
+                        <h2 class="nav__submenu__intro__heading">Groups</h2>
+                        <div class="nav__submenu__intro__text">
+                          <p>
+                            A variety of groups develop Web Standards,
+                            guidelines, or supporting materials.
+                          </p>
+                          <a href="#"
+                            >About W3C groups</a
+                          >
+                        </div>
+                      </div>
+                      <ul class="clean-list" role="list">
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Working Groups
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Interest Groups
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Community Groups
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Business Groups
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Technical Architecture Group
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Invited Experts
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Participant guidebook
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Positive work environment
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+
+
+
+
+
+                  <!-- get involved -->
+
+
+                <li class="top-nav-item has-children">
+
+
+                  <a href="#" class="nav-link" style="display: flex;">
+                    Get involved
+                    <img src="solid/angle-down.svg" alt="#" height="16" width="16" style="text-align: center; padding-left: 5px;">
+              
+                  </a>
+                  
+                  <div
+                    class="nav__submenu"
+                    data-nav="submenu"
+                    style="display: none"
+                  >
+                    <div class="l-center">
+                      <div class="nav__submenu__intro">
+                        <h2 class="nav__submenu__intro__heading">
+                          Get involved
+                        </h2>
+                        <div class="nav__submenu__intro__text">
+                          <p>
+                            W3C works at the nexus of core technology, industry
+                            needs, and societal needs.
+                          </p>
+                          <a href="#"
+                            >Find ways to get involved</a
+                          >
+                        </div>
+                      </div>
+                      <ul class="clean-list" role="list">
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Business ecosystems
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Why join W3C
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Member Home
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Mailing lists
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Donate
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Sponsoring W3C
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+
+
+                <!-- resource -->
+
+                <li class="top-nav-item has-children">
+                  
+                  <a href="#" class="nav-link" style="display: flex;">
+                    Resources
+                    <img src="solid/angle-down.svg" alt="#" height="16" width="16" style="text-align: center; padding-left: 5px;">
+              
+                  </a>
+                  <div
+                    class="nav__submenu"
+                    data-nav="submenu"
+                    style="display: none"
+                  >
+                    <div class="l-center">
+                      <div class="nav__submenu__intro">
+                        <h2 class="nav__submenu__intro__heading">Resources</h2>
+                        <div class="nav__submenu__intro__text">
+                          <p>
+                            Master Web fundamentals, use our developer tools, or
+                            contribute code.
+                          </p>
+                          <a href="#"
+                            >Learn from W3C resources</a
+                          >
+                        </div>
+                      </div>
+                      <ul class="clean-list" role="list">
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Developers
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Validators and tools
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Accessibility fundamentals
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Internationalization
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Translations of W3C standards and drafts
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Code of conduct
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+
+
+
+
+                <!-- News and events ******************************* -->
+
+                <li class="top-nav-item has-children">
+                  <a href="#" class="nav-link" style="display: flex;">
+                    News and events
+                    <img src="solid/angle-down.svg" alt="#" height="16" width="16" style="text-align: center; padding-left: 5px;">
+              
+                  </a>
+                  <div
+                    class="nav__submenu"
+                    data-nav="submenu"
+                    style="display: none"
+                  >
+                    <div class="l-center">
+                      <div class="nav__submenu__intro">
+                        <h2 class="nav__submenu__intro__heading">
+                          News and events
+                        </h2>
+                        <div class="nav__submenu__intro__text">
+                          <p>
+                            Recent content across news, blogs, press releases,
+                            media; upcoming events.
+                          </p>
+                          <a href="#"
+                            >Follow news and events</a
+                          >
+                        </div>
+                      </div>
+                      <ul class="clean-list" role="list">
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            News
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Blog
+                          </a>
+                        </li>
+                        <li class="break-after">
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Press releases
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Press and media
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Events
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Annual W3C Conference (TPAC)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- end news event**************************************** -->
+
+
+
+
+                <!-- about *********************************************** -->
+                <li class="top-nav-item has-children">
+                  <a href="#" class="nav-link" style="display: flex;">
+                    About
+                    <img src="solid/angle-down.svg" alt="#" height="16" width="16" style="text-align: center; padding-left: 5px;">
+              
+                  </a>
+                  <div
+                    class="nav__submenu"
+                    data-nav="submenu"
+                    style="display: none" >
+                  
+                    <div class="l-center">
+                      <div class="nav__submenu__intro">
+                        <h2 class="nav__submenu__intro__heading">About</h2>
+                        <div class="nav__submenu__intro__text">
+                          <p>
+                            Understand our values and principles, learn our
+                            history, look into our policies, meet our people.
+                          </p>
+                          <a href="#"
+                            >Find out more about us</a
+                          >
+                        </div>
+                      </div>
+                      <ul class="clean-list" role="list">
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Our mission
+                          </a>
+
+                          
+
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Leadership
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Staff
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Evangelists
+                          </a>
+                        </li>
+                        <li class="break-after">
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Careers
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Diversity
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Sponsoring W3C
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Media kit
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Contact
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Positive work environment
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Policies and legal information
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="with-icon--before with-icon--larger"
+                            href="#"
+                          >
+                            <svg
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 320 512"
+                              class="icon icon--larger"
+                              focusable="false"
+                              aria-hidden="true"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path
+                                class="chevron-left"
+                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                              />
+                              <path
+                                class="chevron-right"
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                              />
+                            </svg>
+                            Help
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="top-nav-item">
+                  <a
+                   
+                    href="/help/search/"
+                    class="nav-link icon-link"
+                  >
+                    <img
+                      class="icon"
+                      src="img/search.svg"
+                      width="24"
+                      height="24"
+                      alt
+                      aria-hidden="true"
+                    /><span class="hide-at-max-width">Search</span>
+                  </a>
+                </li>
+                <li class="top-nav-item">
+                  <a
+
+                    href="/users/myprofile/"
+                    id="account-login-link"
+                    class="account-login icon-link with-icon--after"
+                  >
+                    My account
+                    <span class="avatar avatar--small icon">
+                      <img
+                        src="img/avatar.svg"
+                        width="24"
+                        height="24"
+                        alt
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- end nav 2 -->
+
+
+
+
+        </header>
+
+        <!-- header end -->
+
+
+
+
+
+
+        <!-- main  start -->
+
+        <main id="main">
+          <div class="us hero">
+            <div class="l-center">
+              <div class="l-sidebar">
+                <div>
+                  <div class="not-sidebar">
+                    <h1>Making the Web work</h1>
+                    <div class="lead">
+                      <p>
+                        The World Wide Web Consortium (W3C) develops
+                        <a href="#">standards and guidelines</a> to
+                        help everyone build a web based on the principles of
+                        <a href="#">accessibility</a>,
+                        <a href="#"
+                          >internationalization</a
+                        >, <a href="#">privacy</a> and
+                        <a href="#">security</a>.
+                      </p>
+                    </div>
+
+                    <a class="button button--alt" href="#"
+                      >Read more about W3C</a
+                    >
+                  </div>
+
+                  <div class="sidebar">
+                    <img
+                      src="img/group.svg"
+                      alt
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="component component--members us">
+            <div class="l-center">
+              <h2>Working with stakeholders of the Web</h2>
+              <p>
+                A range of organizations join the World Wide Web Consortium as
+                Members to work with us to drive the direction of core web
+                technologies and exchange ideas with industry and research
+                leaders. We rotate randomly a few of our Member organizations'
+                logos underneath.
+              </p>
+              <p>
+                The Web Consortium and its members, with help from the public
+                and the web community, focus on a range of business ecosystems
+                that the Web transforms, including
+                <a href="#">E-commerce</a>,
+                <a href="#">Media & Entertainment</a>,
+                <a href="#">Publishing</a> and several
+                other areas.
+              </p>
+              <div class="component--members__grid">
+                <figure>
+                  
+                 <figcaption>  <img src="img/85690.png" alt=""> </figcaption>
+                </figure>
+                <figure>
+                  <figcaption> <img src="img/73795.png" alt=""> </figcaption>
+                </figure>
+                <figure>
+                  <figcaption> <img src="img/142937.png" alt=""> </figcaption>
+                </figure>
+                <figure>
+                  <figcaption> <img src="img/106670.png" alt=""> </figcaption>
+                </figure>
+                <figure>
+                  <figcaption> <img src="img/79706.png" alt=""> </figcaption>
+                </figure>
+                <figure>
+                  <figcaption> <img src="img/95986.png" alt=""> </figcaption>
+                </figure>
+              </div>
+              <a class="button button--alt" href="#"
+                >Discover how W3C supports these organizations</a
+              >
+            </div>
+          </div>
+
+          <section class="component component--fifty-fifty reversed">
+            <div class="image">
+              <img
+                src="img/tpac2023-home.jpg"
+               
+                sizes="(min-width: 48em) 50vw, 100vw"
+                loading="lazy"
+                alt="TPAC - 2023"
+              />
+            </div>
+            <div class="composent50/50">
+              <h2 class="txt-earth">W3C TPAC 2023</h2>
+              <p>
+                The W3C annual conference is an important event for the Web
+                community.
+                <abbr title="Technical Plenary and Advisory Committee"
+                  >TPAC</abbr
+                >
+                gathers in a single event the W3C Members and Boards, W3C
+                Working and Interest Groups meetings, and a series of one-hour
+                sessions brought by the attendees.
+              </p>
+              <p>
+                This well-attended and popular event is an important means for
+                W3C to coordinate solutions to technical issues that transcend
+                group borders.
+              </p>
+              <p>
+                Watch our short
+                <a href="#">video</a>
+                to learn more about TPAC.
+              </p>
+              <div class="l-box l-box--no-border l-box--no-padding">
+                <a class="button button--alt" href="#"
+                  >Visit this year's event page</a
+                >
+              </div>
+            </div>
+          </section>
+
+          <section class="component component--fifty-fifty">
+            <div class="image">
+              <img
+                src="img/ryan-quintal-US9Tc9pKNBU-unsplash.jpg"
+                sizes="(min-width: 48em) 50vw, 100vw"
+                loading="lazy"
+                alt="#"
+              />
+            </div>
+            <div class="composent50/50">
+              <h2 class="txt-earth">Web standards</h2>
+              <p>
+                Web standards are the building blocks of a consistent digitally
+                connected world. They are implemented in browsers, blogs, search
+                engines, and other software that power our experience on the
+                Web.
+              </p>
+              <p>
+                W3C is an international community where
+                <a href="#>Member</a>, a full-time
+                <a href="#">staff</a>, and the public work together to
+                develop web standards.
+              </p>
+              <div class="l-box l-box--no-border l-box--no-padding">
+                <a class="button button--alt" href="#"
+                  >Learn more about Web standards</a
+                >
+              </div>
+            </div>
+          </section>
+
+          <section class="component component--fifty-fifty">
+            <div class="image">
+              <img
+                src="img/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
+              
+                sizes="(min-width: 48em) 50vw, 100vw"
+                loading="lazy"
+                alt=""
+              />
+            </div>
+            <div class="composent50/50">
+              <h2 class="txt-earth">Get involved</h2>
+              <p>
+                W3C works at the nexus of core technology, industry needs, and
+                societal needs. Everyone can get involved with the work we do.
+              </p>
+              <p>
+                There are many ways individuals and organizations can
+                participate in the Web Consortium to advance web
+                standardization.
+              </p>
+              <div class="l-box l-box--no-border l-box--no-padding">
+                <a class="button button--alt" href="#"
+                  >Ways to get involved</a
+                >
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- main end -->
+
+
+
+
+
+        <!-- aside start -->
+
+        <aside class="crosslinks">
+          <div class="l-center">
+            <div
+              class="component component--columns component--columns--images"
+            >
+              <div class="component--columns__intro">
+                <h2>Latest news</h2>
+                <p>
+                  Latest entries from across our
+                  <a href="https//:www.google.com">News</a>,
+                  <a href="https//:www.google.com">Press Releases</a> or
+                  <a href="https//:www.google.com">Blog</a>.
+                </p>
+              </div>
+              <ul class="clean-list" role="presentation">
+                <li>
+                  <div class="card" data-component="card">
+                    <div class="bloc">
+                      <h3 class="card__heading">
+                        <a href="#" class="card__link"
+                          >Infinite Intelligence and Secure Connection: W3C
+                          China's Web Technology Forum Report</a
+                        >
+                      </h3>
+                      <p>
+                        This post summarizes the conversation during the Web
+                        Technology Forum in June 2023, organized by W3C China as
+                        a hybrid event with the main in-person hub in Beijing.
+                      </p>
+                      <p class="txt-pluto" class="down">Blog</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card" data-component="card">
+                    <div class="bloc">
+                      <h3 class="card__heading">
+                        <a href="#" class="card__link"
+                          >Draft Note: Catalan Gap Analysis</a
+                        >
+                      </h3>
+                      <p>
+                        This document describes and prioritises gaps for the
+                        support of Catalan on the Web and in eBooks.
+                      </p>
+                      <p class="txt-pluto" class="down">News</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card" data-component="card">
+                    <div class="bloc">
+                      <h3 class="card__heading">
+                        <a href="#" class="card__link"
+                          >Draft Note: Guidance on Applying WCAG 2.2 to Non-Web
+                          Information and Communications Technologies
+                          (WCAG2ICT)</a
+                        >
+                      </h3>
+                      <p></p>
+                      <p class="txt-pluto" class="down">News</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card" data-component="card">
+                    <div class="bloc">
+                      <h3 class="card__heading">
+                        <a href="#" class="card__link"
+                          >Web Environment Integrity has no standing at W3C;
+                          understanding new W3C work</a
+                        >
+                      </h3>
+                      <p>
+                        This article addresses that Web Environment Integrity is
+                        not being worked on at W3C, and proceeds to explaining
+                        how work is brought to W3C and the processes that foster
+                        the development of Web standards and guidelines that
+                        ensure the long-term growth of the Web.
+                      </p>
+                      <p class="txt-pluto" class="down">Blog</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <!-- aside end -->
+      </div>
+
+      <!-- footer -->
+
+      <footer class="global-footer">
+        <div class="l-center">
+          <div class="global-footer__links">
+            <div class="l-cluster">
+              <ul class="clean-list" role="list">
+                <li>
+                  <a href="#" >
+                    <span  >Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span  >Contact</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" >
+                    <span  >Help</span>
+                  </a>
+                </li>
+                <li> <a href="#">
+                    <span0> Sponsor </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" >
+                    <span  >Donate</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span  >Privacy Policy</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" >
+                    <span  >Legal</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" >
+                    <span  >System Status</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="clean-list" role="list">
+              <li>
+                <a class="with-icon--larger" href="#">
+                  <img
+                    class="icon icon--larger"
+                    src="icon_f_svg/mastodon.svg"
+                    width="20"
+                    height="20"
+                    alt
+                    aria-hidden="true"
+                    loading="lazy"
+                  />
+                  <span class="visuallyhidden"
+                    ><span  >W3C on Mastodon</span></span
+                  ></a
+                >
+              </li>
+              <li>
+                <a class="with-icon--larger" href="#">
+                  <img
+                    class="icon icon--larger"
+                    src="icon_f_svg/x.svg"
+                    width="20"
+                    height="20"
+                    alt
+                    aria-hidden="true"
+                    loading="lazy"
+                  />
+                  <span class="visuallyhidden"
+                    ><span  >W3C on X</span></span
+                  ></a
+                >
+              </li>
+              <li>
+                <a class="with-icon--larger" href="#" >
+                  <img
+                    class="icon icon--larger"
+                    src="icon_f_svg/github.svg"
+                    width="20"
+                    height="20"
+                    alt
+                    aria-hidden="true"
+                    loading="lazy"
+                  />
+                  <span class="visuallyhidden"
+                    ><span  >W3C on GitHub</span></span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <p class="copyright">
+            <span  >
+               Copyright &copy; 2023
+               <a href="#">World Wide Web Consortium</a>.<br />
+               <abbr title="World Wide Web Consortium">W3C</abbr><sup>&reg;</sup>
+               <a href="#">liability</a>,
+               <a href="#">trademark</a>
+               and
+               <a
+                 rel="license"
+                 href="#"
+                 title="W3C Document License"
+               >permissive license</a>
+               rules apply.
+            </span>
+          </p>
+          
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
