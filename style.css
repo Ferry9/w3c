@@ -6,15 +6,7 @@
 
 
      
-     
-      /*------------------------------------*\
-    #Paths
-\*------------------------------------*/
-     
-      html {
-        line-height: 1.15; /* 1 */
-        -webkit-text-size-adjust: 100%; /* 2 */
-      }
+
 
       /* Sections
    ========================================================================== */
@@ -109,11 +101,9 @@
  Typographical styles for fonts are in 40-base/_typography.scss
  */
       body {
-        background-color: #fff;
         color: #111;
         min-height: 100%;
         overflow-x: hidden;
-        -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
       }
 
@@ -1063,15 +1053,12 @@ a viewport media query.
       }
 
       .global-nav__inner {
-        align-items: center;
         display: flex;
-        flex-wrap: wrap;
       }
       @media screen and (min-width: 70em) {
         .global-nav__inner {
           align-items: flex-end;
           flex-wrap: nowrap;
-          position: relative;
         }
       }
 
@@ -1138,13 +1125,17 @@ a viewport media query.
         outline: solid 3px #f9dc4a;
         outline-offset: 3px;
       }
+
+
       @media screen and (min-width: 70em) {
         .logo-link {
           -webkit-margin-end: 1.5625rem;
           margin-inline-end: 1.5625rem;
           padding-bottom: 0.3125rem;
-          position: relative;
+          position: absolute;
+          top: 0px;
         }
+
         .logo-link::before {
           background-color: #005a9c;
           bottom: 0;
@@ -1334,7 +1325,6 @@ to our global box-sizing rule.
  */
       main,
       #main {
-        box-sizing: content-box;
         margin-left: auto;
         margin-right: auto;
         max-width: 70rem;
@@ -1750,12 +1740,12 @@ to our global box-sizing rule.
         }
       }
 
-      .composent50/50 .l-box {
+      .composent_fifty_fifty .l-box {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
       }
-      .composent50/50 .l-box > * + * {
+      .composent_fifty_fifty .l-box > * + * {
         margin-top: 1rem;
       }
       .component--fifty-fifty__text .l-box a {
@@ -1903,8 +1893,8 @@ to our global box-sizing rule.
     
 
      
-     /*--------------------------------------------------*\
-    #Crosslinks
+     /*
+    Crosslinks
 \*---------------------------------------------------*/
       .crosslinks {
         background-color: #005a9c;
@@ -1983,8 +1973,8 @@ to our global box-sizing rule.
         border-radius: 0;
       }
 
-      /*------------------------------------*\
-    #Recherche
+      /*
+    search
 \*------------------------------------*/
      
 
@@ -2014,7 +2004,7 @@ to our global box-sizing rule.
 
     
       /*
-    Meta info
+    Meta information
 \*------------------------------------*/
       .meta {
         border-bottom: solid 1px #bdbdbd;
@@ -2029,7 +2019,7 @@ to our global box-sizing rule.
       }
 
       /*
-    Family/Series list
+    seri family list
 \*------------------------------------*/
       .family-grouping {
         padding-top: 2.5rem;
@@ -2041,7 +2031,7 @@ to our global box-sizing rule.
 
     
       /*------------------------------------*\
-    #Pre-footer items
+    Pre-footer items
 \*------------------------------------*/
       .pre-footer.l-switcher {
         margin: -1.25rem;
@@ -2137,10 +2127,9 @@ to our global box-sizing rule.
     
 
 
-     
 
-      /*------------------------------------*\
-    #Event
+      /*
+              Event Class
 \*------------------------------------*/
        .content {
         max-width: 47rem;
@@ -2193,8 +2182,8 @@ to our global box-sizing rule.
         margin-bottom: 1.25rem;
       }
 
-      /*------------------------------------*\
-    #Home page
+      /*
+       My Home page
 \*------------------------------------*/
       .home .hero {
         background-color: #fff;
@@ -2207,194 +2196,8 @@ to our global box-sizing rule.
         margin-top: 2.5rem;
       }
 
-      /*------------------------------------*\
-    #Post template
-\*------------------------------------*/
-      .post .content,
-      .post .rss {
-        max-width: 47rem;
-      }
-
-      @supports (grid-column-gap: 8%) {
-        .post .content {
-          max-width: none;
-        }
-        @media screen and (min-width: 64em) {
-          .post .content {
-            display: grid;
-            grid-column-gap: 7.857%;
-            grid-template-columns: 67.143% 25%;
-            grid-template-areas: "article related";
-          }
-        }
-        @media screen and (min-width: 64em) {
-          .post .content article {
-            grid-area: article;
-          }
-        }
-        @media screen and (min-width: 64em) {
-          .post .content .related {
-            grid-area: related;
-          }
-        }
-      }
-      .post .related {
-        margin-top: 2.5rem;
-      }
-
-      @supports (grid-column-gap: 8%) {
-        @media screen and (min-width: 64em) {
-          .post .content .related {
-            margin-top: 0;
-          }
-        }
-      }
-      .post .related__inner {
-        background-color: #f8f8fb;
-        padding: 1.75rem 1.25rem;
-      }
-      .post .related__inner h2 {
-        font-size: 1.1875rem;
-        line-height: 1.9411764706;
-      }
-      .post .related__inner h3 {
-        font-size: 1rem;
-        line-height: 1.3333333333;
-      }
-      .post .related__inner a {
-        color: #545454;
-      }
-      .post .related__inner a:focus {
-        color: #000;
-      }
-
-      .post .related__inner > div,
-      .post .related__inner h3 + * {
-        margin-top: 1.125rem;
-      }
-
-      .post .related__inner > div + div {
-        border-top: solid 1px #bdbdbd;
-        margin-top: 1.5rem;
-        padding-top: 0.9375rem;
-      }
-
-      .post .related__inner li {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-      }
-      .post .related__inner li + li {
-        margin-top: 1.375rem;
-      }
-
-      .post .sub-head {
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        margin-bottom: 1.875rem;
-        margin-top: -1.25rem;
-      }
-      .post .meta {
-        position: relative;
-      }
-      @media screen and (min-width: 48em) {
-        .post .meta dl dd:first-of-type {
-          padding-right: 9.375rem;
-        }
-      }
-      .post .meta dl dd,
-      .post .meta dl dt {
-        margin: 0;
-        padding-bottom: 0.5rem;
-        padding-top: 0.3125rem;
-      }
-      .post .meta dl dt:first-of-type,
-      .post .meta dl dd:first-of-type {
-        padding-top: 0.5rem;
-      }
-      .post .meta dl dt {
-        float: left;
-        font-weight: normal;
-        margin-right: 1em;
-      }
-      .post .skip-to-comments,
-      .post .skip-to-comment-form {
-        color: #545454;
-        display: inline-block;
-        padding-bottom: 0.6875rem;
-        padding-top: 0.6875rem;
-        text-decoration: underline; /* 1 */
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-        text-underline-offset: 0.25em;
-      }
-      .post .skip-to-comments:visited,
-      .post .skip-to-comment-form:visited {
-        color: #545454;
-      }
-      .post .skip-to-comments:focus,
-      .post .skip-to-comment-form:focus {
-        background-color: #f9dc4a;
-        background-image: linear-gradient(
-          to top,
-          #000 3px,
-          #f9dc4a 3px,
-          #f9dc4a
-        );
-        color: #000;
-        text-decoration: none;
-      }
-      @media screen and (min-width: 48em) {
-        .post .skip-to-comments {
-          position: absolute;
-          right: 0;
-          top: 1.1875rem;
-        }
-      }
-      .post .rss {
-        border-top: solid 1px #bdbdbd;
-        padding-top: 2.5rem;
-      }
-
      
-
-      .post__notes {
-        border-top: solid 1px #bdbdbd;
-        margin-top: 3.75rem;
-        padding-top: 1.25rem;
-      }
-      /*------------------------------------*\
-    #Landing page
-\*------------------------------------*/
-      .landing #breadcrumb,
-      .ecosystem #breadcrumb {
-        background-color: #f8f8fb;
-      }
-      .landing main,
-      .landing #main,
-      .ecosystem main,
-      .ecosystem #main {
-        padding-top: 0;
-      }
-      .landing .component--text,
-      .landing .component--image,
-      .landing .component--video,
-      .landing .component--quote,
-      .ecosystem .component--text,
-      .ecosystem .component--image,
-      .ecosystem .component--video,
-      .ecosystem .component--quote {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 44.4375rem;
-      }
-      .landing .component--quote,
-      .ecosystem .component--quote {
-        max-width: 43.1875rem;
-      }
-
-      /*------------------------------------*\
-    #Listing templates
-\*------------------------------------*/
+     
       .listing .wrap {
         background-color: #f8f8fb;
       }
@@ -2562,9 +2365,9 @@ to our global box-sizing rule.
         margin-top: 0.8em;
       }
 
-      /*------------------------------------*\
-    #Group detail
-\*------------------------------------*/
+      /*
+    Group detail
+*/
       .group .content {
         max-width: 47rem;
       }
@@ -2582,6 +2385,7 @@ to our global box-sizing rule.
             grid-template-rows: auto 1fr;
           }
         }
+
         @media screen and (min-width: 64em) {
           .group .content h1 {
             grid-area: title;
@@ -2608,37 +2412,33 @@ to our global box-sizing rule.
           padding-right: 1.25rem;
         }
       }
+
       .group .group-nav__inner [aria-current] {
         font-weight: bold;
       }
+
+
 
       @media screen and (min-width: 64em) {
         .group [data-toggle="true"] {
           display: none;
         }
       }
+
+
       .group [data-toggle="true"][aria-expanded="false"] {
         margin-bottom: 2.0625rem;
       }
-
-     
     
       h3 {
         font-size: 1.5rem;
         line-height: 1.4;
       }
-     
-     
-
-
-
 
       /**
-Change text-alignment at the "laptop" breakpoint,
-as defined in /10-settings/breakpoints
+    Change text-alignment at the "laptop" breakpoint,
+    as defined in /10-settings/breakpoints
  */
-    
-
      
       .us {
         left: 50%;
@@ -2648,9 +2448,3 @@ as defined in /10-settings/breakpoints
         right: 50%;
         width: 100vw;
       }
-
-  
-    
-
-
-  
