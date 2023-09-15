@@ -1,11 +1,6 @@
 
-
-
           /* Toutes mes class on été généré automatiquement gace à l'extention   'IntelliSense for HTML CSS class names'. Cela m'a éviter de beaucoup refléchire sure les problère lier au nom des class.    */
 
-
-
-     
 
 
       /* Sections
@@ -55,13 +50,9 @@
         background-color: transparent;
       }
 
-
-
-   
-
-      /**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
+      /*
+       Prevent `sub` and `sup` elements from affecting the line height in
+      ll browsers.
  */
       sub,
       sup {
